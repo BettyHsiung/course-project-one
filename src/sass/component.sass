@@ -1,0 +1,212 @@
+/* -- burger -- */
+.o-burger
+  display: inline-block
+  position: fixed
+  right: 4vw
+  top: 3rem
+  margin-top: 0
+  cursor: pointer
+  z-index: 999
+  &:not(.is-opened):hover &
+    &__line
+      background-color: $color-main
+    &__line:nth-child(1)
+      width: 5rem
+    &__line:nth-child(2)
+      width: 5rem
+  &__wrap
+    transition: 0.5s
+  &__line
+    +size(4rem, 3px)
+    background-color: $color-main
+    transition: 0.5s
+    &:first-child
+      margin-bottom: 0.5rem
+  &.is-opened &
+    &__line
+      width: 3rem
+    &__line:nth-child(1)
+      transform: translateY(0.4rem) rotate(135deg)
+    &__line:nth-child(2)
+      transform: translateY(-0.4rem) rotate(-135deg)
+  &.is-opened:hover &
+    &__line
+      background-color: $color-green
+
+// burger mode
+.c-navbar
+  &__body
+    position: fixed
+    right: 0
+    top: 0
+    +size(50%, 0)
+    margin-top: 0
+    background-color: rgba($color-sub, 0.9)
+    overflow: hidden
+    transition: height 0.7s 0.7s
+  &__menu
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    +size(100%, auto)
+    min-height: 100%
+    transform: translateY(-2rem)
+    transition: transform 0.7s, opacity 0.7s
+    opacity: 0
+  &__btn-box
+    text-align: center
+  &__text-btn
+    font-size: 2.8rem
+
+@media (max-width: 991.98px)
+  .c-navbar
+    &__body
+      +size(70%, 0)
+
+@media (max-width: 767.98px)
+  .c-navbar
+    &__body
+      +size(100%, 0)
+
+  
+
+/* -- navbar -- */
+.c-navbar
+  position: absolute
+  left: 0
+  top: 0
+  padding: 5rem 4vw
+  z-index: 99999
+  &__body
+    margin-top: 0
+  &__btn
+    padding: 1rem 0
+    transition: 0.5s
+  &__btn:hover &
+    &__text-btn
+      color: $color-green
+  &__text-btn
+    font-family: $font-noto-sans
+    color: $color-main
+    font-size: 1.8rem
+    font-weight: 500
+    letter-spacing: 0.3rem
+    line-height: 1.5
+    transition: 0.7s
+    white-space: nowrap
+  &__link-box
+    display: flex
+    justify-content: flex-end
+    margin-top: 3rem
+    margin-left: 1.5rem
+  &__link-wrap
+    margin-right: 2rem
+  &__link-wrap:hover &
+    &__link
+      font-size: 3.5rem
+  &__link
+    color: $color-main
+    font-size: 3rem
+    transition: 0.3s
+  &.is-opened &
+    &__body
+      height: 100vh
+      transition: 0.7s
+    &__menu
+      transform: translateY(0)
+      opacity: 1
+      transition: transform 0.7s 0.7s, opacity 0.7s 0.7s
+      
+
+/* -- btn all -- */
+.o-btn-all
+  font-family: $font-roboto
+  font-weight: 500
+  color: $color-gray-light
+  display: inline-block
+  padding: 0.3rem 5rem
+  border-radius: 10rem
+  border: 1px solid transparent
+  background-color: $color-main
+  transition: 0.3s
+  &:hover
+    color: $color-main
+    background-color: $color-gray-light
+    border: 1px solid $color-main
+
+/* -- btn map -- */
+.o-btn-map
+  font-family: $font-roboto
+  font-weight: 500
+  color: $color-sub
+  display: inline-block
+  padding: 0 2rem
+  border-radius: 10rem
+  border: 1px solid $color-sub
+  transition: 0.3s
+  &:hover
+    color: $color-gray-light
+    border: 1px solid $color-gray-light
+    background-color: $color-main
+
+/* -- go top -- */
+.o-gotop
+  display: inline-block
+  position: absolute
+  right: 0
+  bottom: 100%
+  transform: translate(-50%, -50%)
+  padding: 1.2rem 0.9rem
+  border-radius: 50%
+  background-color: $color-main
+  border: 6px solid $color-sub
+  box-shadow: 0 0 5px transparent
+  color: $color-gray-light
+  text-align: center
+  user-select: none
+  cursor: pointer
+  z-index: 10
+  transition: 0.3s
+  &:hover
+    padding: 1.5rem 1.2rem
+  &:active
+    padding: 0.4rem 0.1rem
+  &__text
+    font-weight: 900
+
+@media (max-width: 575.98px)
+  .o-gotop
+    bottom: 90%
+    padding: 0.8rem 0.5rem
+    &__text
+      font-weight: 500
+      font-size: 0.2rem
+
+/* -- card -- */
+.c-card
+  display: flex
+  flex-direction: column
+  height: 100%
+  padding: 2.5rem
+  margin-right: 1.5rem
+  border-radius: 25px
+  background-color: $color-main
+  transition: 0.3s
+  &:hover
+    box-shadow: 0 0 15px rgba($color-main, 0.8)
+  &__body
+    display: flex
+    flex-direction: column
+    align-items: center
+    height: 100%
+    padding: 2rem 1rem
+  &__content
+    margin-bottom: 3rem
+    color: $color-sub
+    text-align: center
+  &__title
+    font-size: 1.6rem
+    font-weight: 300
+    margin-bottom: 1rem
+    white-space: nowrap

@@ -1,0 +1,154 @@
+$color-main: #da9e60
+$color-sub: #faf1b9
+$color-green: #d2e38d
+$color-gray-light: #fffffe
+$font-noto-sans: 'Noto Sans TC', '微軟正黑體', sans-serif
+$font-roboto: 'Roboto','Arial', sans-serif
+
+=size($w, $h: $w)
+  width: $w
+  height: $h
+
+html
+  font-size: calc(16px * 10 / 16)
+
+*
+  position: relative
+  -webkit-font-smoothing: antialiased
+  box-sizing: border-box
+  &::selection
+    background-color: $color-green
+    color: #fff
+  &::-moz-selection
+    background-color: $color-green
+    color: #fff
+
+body
+  margin: 0
+  background-color: $color-gray-light
+  font-family: $font-noto-sans
+  font-size: 1.6rem
+  letter-spacing: 0.1rem
+  line-height: 1.7
+  color: $color-main
+  transition: background-color 0.5s
+  background-image: url('../img/bg-ball.png')
+  &.is-about-active
+    background-color: $color-sub
+    background-image: url('')
+  &.is-contact-active
+    background-color: $color-sub
+    
+
+.u-hover-mobile
+  position: fixed
+  +size(100%, 100vh)
+  left: 0
+  top: 0
+  overflow: auto
+  z-index: -9999
+  &__block
+    display: inline-block
+    +size(100%, 98vh)
+
+
+a
+  display: block
+  text-decoration: none
+  color: inherit
+  &:hover
+    color: inherit
+img
+  max-width: 100%
+ul
+  list-style: none
+  padding: 0
+  margin: 0
+
+h1, h2, h3
+  font-weight: 500
+h1, h2, h3, p
+  margin: 0
+i
+  font-size: 2.4rem
+
+.u-slogan
+  font-size: 7.5rem
+  font-weight: 800
+  letter-spacing: 1rem
+.u-title
+  font-size: 3.5rem
+  font-weight: 500
+  letter-spacing: 1rem
+.u-text-desc
+  font-size: 1.7rem
+  font-weight: 300
+  letter-spacing: 0.7rem
+.u-title-section
+  font-size: 3rem
+  font-weight: 500
+  letter-spacing: 0.5rem
+  color: $color-main
+.u-text-cake
+  font-size: 14rem
+  font-weight: 600
+  letter-spacing: 1.7rem
+  color: $color-main
+  text-shadow: 25px 25px $color-sub
+  opacity: 0.6
+.u-contact-desc
+  font-size: 1.7rem
+  font-weight: 300
+  letter-spacing: 0.7rem
+  color: $color-sub
+  line-height: 3
+.u-text-slogan
+  font-size: 11rem
+  font-weight: 600
+  letter-spacing: 1rem
+  color: $color-main
+.u-text-footer
+  font-size: 1.5rem
+  font-weight: 500
+  line-height: 1.25
+  font-family: $font-noto-sans
+.u-text-copyright
+  font-size: 1.4rem
+
+@media (max-width: 1199.98px)
+  html
+    font-size: calc(15px * 10 / 16)
+
+@media (max-width: 1024px)
+  html
+    font-size: calc(14px * 10 / 16)
+  .u-text-cake
+    font-size: 13rem
+    text-shadow: 15px 15px $color-sub
+
+@media (max-width: 991.98px)
+  .u-slogan
+    font-size: 6.5rem
+
+@media (max-width: 767.98px)
+  .u-text-cake
+    font-size: 11rem
+  .u-text-slogan
+    font-size: 11rem
+
+@media (max-width: 575.98px)
+  .u-slogan
+    font-size: 4.5rem
+  .u-title
+    font-size: 3rem
+  .u-text-desc
+    font-size: 1.5rem
+  .u-title-section
+    font-size: 2.5rem
+  .u-text-cake
+    font-size: 5.5rem
+    text-shadow: 10px 10px $color-sub
+  .u-contact-desc
+    line-height: 2.5
+  .u-text-slogan
+    font-size: 6rem

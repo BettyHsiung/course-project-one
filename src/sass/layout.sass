@@ -1,0 +1,302 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500&family=Roboto:wght@300;400;700&display=swap')
+@import './utility.sass'
+@import './component.sass'
+
+/* -- header -- */
+.l-header
+  display: flex
+  justify-content: center
+  align-items: center
+  +size(100%, 100vh)
+  background-color: $color-gray-light
+  &__logo-wrap
+    position: absolute
+    left: 4vw
+    top: 3rem
+  &__logo-mask
+    max-width: 70px
+  &__content
+    text-align: center
+    white-space: nowrap
+  &__slogan
+    margin-bottom: 2.5rem
+  &__title
+    position: relative !important
+    margin-bottom: 1.5rem
+  &__desc
+    position: relative !important
+    
+
+/* -- section -- */
+section
+  padding: 0 4vw
+.container
+  max-width: 1560px
+
+/* -- about -- */
+.l-about
+  padding-top: 14rem
+  &__title-section
+    margin-bottom: 12rem
+  &__content
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    white-space: nowrap
+    padding: 7rem 10vw
+    overflow: hidden
+  &__title
+    margin-bottom: 2rem
+  &__row
+    display: flex
+    justify-content: flex-end
+    align-items: center
+  &__story-mask
+    margin-top: 8rem
+  &__container-fluid
+    max-width: calc(1560px + 8vw)
+    padding-left: 0
+    margin-left: -4vw
+  &__cake
+    transform: rotate(-90deg)
+    margin: 5rem 0 9rem
+
+  
+/* -- popular -- */
+.l-popular
+  padding-top: 9rem
+  &__title-section
+    margin-bottom: 10rem
+    text-align: center
+  &__swiper
+    padding: 10px
+  &__wrapper
+    transition-timing-function: linear !important
+  &__swiper-slide
+    width: 15rem
+    height: auto
+  &__body
+    display: flex
+    justify-content: center
+    align-items: center
+  &__btn-all
+    display: flex
+    justify-content: center
+    align-items: center
+    margin-top: 10rem
+    
+
+/* -- contact -- */
+.l-contact
+  padding-top: 22rem
+  &__title-section
+    margin-bottom: 10rem
+  &__container-fluid
+    max-width: calc(1560px + 8vw)
+    padding-left: 0
+    margin-left: -4vw
+    background-color: $color-main
+    border-radius: 15px
+    padding: 3rem
+    margin-bottom: 40rem
+  &__content-wrap
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    height: 100%
+    white-space: nowrap
+  &__btn-map
+    margin-top: 3rem
+    margin-left: auto
+
+/* -- footer -- */
+.l-footer
+  margin-top: 25rem
+  &__slogan
+    position: absolute
+    left: 50vw
+    bottom: 15rem
+    transform: translateX(-50%)
+    white-space: nowrap
+  &__sitemap
+    display: flex
+    flex-direction: column
+    align-items: center
+    padding: 5rem 4vw
+    background-color: $color-sub
+  &__btn-box
+    display: flex
+    justify-content: center
+    flex-wrap: wrap
+  &__btn-wrap
+    &:not(:last-child)
+      margin-right: 2.4rem
+  &__btn:hover &
+    &__text-btn
+      color: $color-green
+  &__text-btn
+    white-space: nowrap
+    text-align: center
+    transition: 0.3s
+  &__link-box
+    display: flex
+    align-items: center
+    padding: 1.2rem 0 2rem
+  &__link-wrap
+    transition: 0.3s
+    &:hover
+      color: $color-green
+    &:not(:last-child)
+      margin-right: 1rem
+
+/* -- header inner products-- */
+.l-header-inner-products
+  display: flex
+  justify-content: center
+  align-items: center
+  +size(100%, 100vh)
+  margin-bottom: 25rem
+  background-image: url('../img/banner/banner-ball.jpg')
+  background-size: cover
+  background-position: center center
+  &__logo-wrap
+    position: absolute
+    left: 4vw
+    top: 3rem
+  &__logo-mask
+    max-width: 70px
+
+
+/* -- products -- */
+.l-products
+  &__content
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+  &__desc
+    margin-bottom: 2rem
+  &__link-box
+    display: flex
+    padding: 1.2rem 0 2rem
+  &__link-wrap
+    transition: 0.3s
+    &:hover
+      color: $color-green
+    &:not(:last-child)
+      margin-right: 1rem
+  &__link
+    font-size: 3rem
+
+
+/* -- header inner map-- */
+.l-header-inner-map
+  display: flex
+  justify-content: center
+  align-items: center
+  +size(100%, 100vh)
+  margin-bottom: 25rem
+  background-image: url('../img/banner/banner-ball.jpg')
+  background-size: cover
+  background-position: center center
+  &__logo-wrap
+    position: absolute
+    left: 4vw
+    top: 3rem
+  &__logo-mask
+    max-width: 70px
+
+/* -- map -- */
+.l-map
+  &__wrap
+    +size(100%, 45vh)
+  &__google
+    +size(100%)
+
+
+@media (max-width: 1024px)
+  .l-about
+    &__content
+      padding: 6vw
+
+  .l-contact
+    &__container-fluid
+      margin-bottom: 35rem
+
+@media (max-width: 1024px) and (orientation: portrait)
+
+@media (max-width: 991.98px)
+  .l-about
+    &__content
+      padding: 4vw
+    &__title
+      font-size: 3rem
+
+@media (max-width: 767.98px)
+  .l-about
+    padding-top: 15vw
+    &__title-section
+      margin-bottom: 12vw
+    // &__container
+    //   margin-left: auto
+    //   padding-left: var(--bs-gutter-x, .75rem)
+    &__content
+      padding: 12vw
+    &__story-mask
+      margin-top: 1vw
+
+  .l-popular
+    padding-top: 5vw
+
+  .l-contact
+    padding-top: 22vw
+    &__title-section
+      margin-bottom: 12vw
+    &__content-wrap
+      padding: 8vw
+
+  .l-footer
+    margin-top: 30vw
+    &__slogan
+      bottom: 18vw
+
+  .l-header-inner-products
+    margin-bottom: 30vw
+
+  .l-header-inner-map
+    margin-bottom: 30vw
+
+@media (max-width: 575.98px)
+  .l-about
+    padding-top: 22vw
+    &__title-section
+      margin-bottom: 15vw
+    &__title
+      font-size: 2.5rem
+      letter-spacing: 0.7rem
+    &__desc
+      letter-spacing: 0.5rem
+    &__content
+      padding: 10vw 5vw 18vw
+    &__story-mask
+      margin-bottom: 5vw
+
+  .l-popular
+    padding-top: 1vw
+
+  .l-contact
+    padding-top: 30vw
+    &__container-fluid
+      margin-bottom: 45vw
+    &__title-section
+      margin-bottom: 16vw
+    &__content-wrap
+      padding: 10vw 15vw
+
+  .l-footer
+    &__slogan
+      bottom: 25vh
+
+
+

@@ -1,0 +1,45 @@
+doctype html
+html(lang="en")
+  head
+    include includes/config.pug
+    include includes/head.pug
+    
+    meta(property="og:title" content=title)
+    title #{title}
+
+  body
+    #app
+      
+      .u-hover-mobile
+        .u-hover-mobile__block
+
+      include includes/navbar.pug
+
+      header.l-header-inner-products(data-aos="fade-down")
+        a.l-header-inner-products__logo-wrap(href="index.html")
+          .l-header-inner-products__logo-mask
+            img.l-header-inner-products__logo(src="img/logo/logo-icon.png", alt="logo")
+
+        .l-header-inner-products__title-wrap
+          h2.l-header-inner-products__title.u-title PRODUCTS
+
+
+      main.main
+        section.l-products
+          .container  
+            .row
+              .col-md-12
+                .l-products__content
+                  p.l-products__desc.u-text-desc 最新菜單都在粉專唷!
+                  p.l-products__desc.u-text-desc Follow us
+                  .l-products__link-box
+                    a.l-products__link-wrap(href="https://www.facebook.com/This-BALLpancakes-306222823498056/" target="_blank")
+                      i.fab.fa-facebook.l-products__link
+                    a.l-products__link-wrap(href="https://www.instagram.com/thisball._____/?hl=zh-tw" target="_blank") 
+                      i.fab.fa-instagram.l-products__link
+
+
+
+
+      include includes/footer.pug
+      script(src="js/main.min.js")
