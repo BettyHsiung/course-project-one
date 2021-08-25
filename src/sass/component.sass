@@ -70,7 +70,6 @@
       +size(100%, 0)
 
   
-
 /* -- navbar -- */
 .c-navbar
   position: absolute
@@ -81,7 +80,7 @@
   &__body
     margin-top: 0
   &__btn
-    padding: 1rem 0
+    padding: 1.5rem 0
     transition: 0.5s
   &__btn:hover &
     &__text-btn
@@ -134,29 +133,28 @@
     color: $color-main
     background-color: $color-gray-light
     border: 1px solid $color-main
+    
 
 /* -- btn map -- */
 .o-btn-map
   font-family: $font-roboto
   font-weight: 500
-  color: $color-sub
+  color: $color-main
   display: inline-block
   padding: 0 2rem
   border-radius: 10rem
-  border: 1px solid $color-sub
+  border: 1px solid $color-main
   transition: 0.3s
   &:hover
     color: $color-gray-light
-    border: 1px solid $color-gray-light
     background-color: $color-main
 
 /* -- go top -- */
 .o-gotop
   display: inline-block
   position: absolute
-  right: 0
+  right: 4vw
   bottom: 100%
-  transform: translate(-50%, -50%)
   padding: 1.2rem 0.9rem
   border-radius: 50%
   background-color: $color-main
@@ -177,11 +175,8 @@
 
 @media (max-width: 575.98px)
   .o-gotop
-    bottom: 90%
-    padding: 0.8rem 0.5rem
     &__text
       font-weight: 500
-      font-size: 0.2rem
 
 /* -- card -- */
 .c-card
@@ -189,7 +184,7 @@
   flex-direction: column
   height: 100%
   padding: 2.5rem
-  margin-right: 1.5rem
+  margin-right: 2rem
   border-radius: 25px
   background-color: $color-main
   transition: 0.3s
