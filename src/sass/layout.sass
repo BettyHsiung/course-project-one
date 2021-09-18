@@ -124,7 +124,7 @@ section
   &__deco
     top: 0
     box-shadow: 0 0 5px $color-black-light
-    border: 1px solid $color-black-light
+    border: 1px solid rgba($color-black-light, 0.8)
     border-radius: 50%
     animation: decoMove 2s infinite
     &.--deco01
@@ -218,6 +218,7 @@ section
       top: 0
       +size(85%, 40vw)
       background-color: $color-main
+      background-image: url('../img/bg-ballgray.png')
       border-radius: 0 15rem 0 0
   &__img-row-top
     display: flex
@@ -248,6 +249,7 @@ section
       top: 0
       +size(65%, 30vw)
       background-color: $color-main
+      background-image: url('../img/bg-ballgray.png')
       border-radius: 0 0 0 12rem
   &__img-row-bottom
     display: flex
@@ -292,6 +294,14 @@ section
 .l-popular
   padding-top: 10rem
   +size(100%, 65rem)
+  &::before
+    content: ''
+    display: block
+    position: absolute
+    left: 0
+    top: 0
+    +size(100%, 75rem)
+    background-image: url('../img/bg-ballmain.png')
   &__title-section
     margin-bottom: 8rem
     text-align: center
@@ -306,9 +316,9 @@ section
     padding: 15px
   &__wrapper
     transition-timing-function: linear !important
-  &__swiper-slide
-    width: 15rem
-    height: auto
+  // &__swiper-slide
+  //   width: 15rem
+  //   height: auto
 
 
 /* -- product -- */
@@ -369,8 +379,8 @@ section
       top: 5%
   &__deco
     border-radius: 50%
-    box-shadow: 0 0 5px $color-black-light
-    border: 1px solid $color-black-light
+    box-shadow: 0 0 4px $color-black-light
+    border: 1px solid rgba($color-black-light, 0.8)
     opacity: 0
     transition: 0.5s
     &.--deco01
@@ -592,7 +602,7 @@ section
 
   .l-product
     &__deco
-      box-shadow: 0 0 3px $color-black-light
+      box-shadow: 0 0 2px $color-black-light
 
 @media (max-width: 767.98px)
   .l-header
@@ -605,7 +615,7 @@ section
   .l-about
     padding-top: 12vw
     &::before
-      +size(100%, 250rem)
+      +size(100%, 270rem)
     &__title-section
       margin-bottom: 10vw
     &__story-one
@@ -691,7 +701,7 @@ section
 
   .l-about
     &::before
-      +size(100%, 200rem)
+      +size(100%, 230rem)
     &__deco
       &.--deco01
         +size(4rem)
@@ -707,6 +717,7 @@ section
         +size(100%, 70vh)
     &__bg-top
       &::before
+        background-size: 26rem 20rem
         border-radius: 0 8rem 0 0
     &__text-wrap-top
       left: 30%
@@ -715,6 +726,7 @@ section
       border: 1px solid $color-black-light
     &__bg-bottom
       &::before
+        background-size: 26rem 20rem
         border-radius: 0 0 0 6rem
     &__text-wrap-bottom
       right: 20%
@@ -724,6 +736,8 @@ section
   .l-popular
     padding-top: 16vw
     +size(100%, 50rem)
+    &::before
+      background-size: 30rem 22rem
     &__title-section
       margin-bottom: 10vw
 

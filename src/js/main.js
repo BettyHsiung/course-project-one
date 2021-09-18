@@ -65,9 +65,9 @@ $(function() {
 $(function() {
   let balls = []
   let gradients = [
-    'radial-gradient(circle at 50% 50%, rgba(255, 255, 245, 0.1), rgba(255, 255, 245, 0) 61%)',
-    'radial-gradient(circle at 50% 50%, rgba(255, 255, 245, 0.1), rgba(255, 255, 245, 0) 75%)',
-    'radial-gradient(circle at 50% 50%, rgba(255, 218, 199, 0.1), rgba(255, 255, 245, 0) 70%)'
+    'radial-gradient(circle at 50% 50%, rgba(255, 255, 250, 0), rgba(255, 255, 250, 0) 0%)',
+    'radial-gradient(circle at 50% 50%, rgba(255, 255, 250, 0.1), rgba(255, 255, 250, 0) 50%)',
+    'radial-gradient(circle at 50% 50%, rgba(255, 218, 199, 0.2), rgba(255, 255, 250, 0) 50%)'
   ]
   let Ball = function(el, options) {
     this.setting = {
@@ -148,41 +148,6 @@ $(function() {
     maxSpeed: 6
   })
 })
-
-
-// 滾動至 about
-// $(function() {
-//   $(window).scroll(function() {
-//     if ($('.l-about')[0] !== undefined) {
-//       let $about = $('.l-about')
-//       let aboutTop = $about.offset().top - 100
-//       let aboutBottom = $about.offset().top + $about.outerHeight() / 2.5
-//       if (this.scrollY > aboutTop && this.scrollY < aboutBottom) {
-//         $('body').addClass('is-about-active')
-//       } else {
-//         $('body').removeClass('is-about-active')
-//       }
-//     }
-//   })
-// })
-
-
-// 滾動至 popular
-$(function() {
-  $(window).scroll(function() {
-    if ($('.l-popular')[0] !== undefined) {
-      let $popular = $('.l-popular')
-      let popularTop = $popular.offset().top - 60
-      let popularBottom = $popular.offset().top + $popular.outerHeight() + 200
-      if (this.scrollY > popularTop && this.scrollY < popularBottom) {
-        $('body').addClass('is-popular-active')
-      } else {
-        $('body').removeClass('is-popular-active')
-      }
-    }
-  })
-})
-
 
 // go top
 $(function() {
