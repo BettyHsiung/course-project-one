@@ -98,8 +98,8 @@ section
     position: absolute
     left: 0
     top: 0
-    +size(100%, 170rem)
-    background-image: linear-gradient(to bottom, $color-gray-light 0%, $color-main 20%, $color-main 100%)
+    +size(100%, 200rem)
+    background-image: linear-gradient(to bottom, $color-gray-light 0%, $color-main 30%, $color-main 90%, rgba($color-gray-light, 0.1) 100%)
     z-index: -100
   &__title-section
     margin-bottom: 10rem
@@ -121,16 +121,6 @@ section
       +size(100%)
       background-color: $color-main
       mix-blend-mode: multiply
-  &__title-sub-wrap
-    position: absolute
-    left: 86%
-    top: -7%
-  &__title-sub
-    padding: 0.7rem 3.7rem
-    background-color: $color-black-light
-    border-radius: 0 2rem 2rem 0
-    text-align: center
-    white-space: nowrap
   &__deco
     top: 0
     box-shadow: 0 0 5px $color-black-light
@@ -227,8 +217,6 @@ section
       left: 0
       top: 0
       +size(85%, 40vw)
-      background-image: url('../img/bg-ballgray.png')
-      background-size: 30rem 22rem
       background-color: $color-main
       border-radius: 0 15rem 0 0
   &__img-row-top
@@ -260,7 +248,6 @@ section
       top: 0
       +size(65%, 30vw)
       background-color: $color-main
-      background-image: url('../img/bg-ballgray.png')
       border-radius: 0 0 0 12rem
   &__img-row-bottom
     display: flex
@@ -332,10 +319,9 @@ section
     display: block
     position: absolute
     left: 0
-    top: 50%
-    transform: translateY(-50%)
-    +size(100%, 80rem)
-    background-image: linear-gradient(to bottom, rgba($color-gray-light, 0.1) 0%, rgba($color-main, 0.5) 50%, rgba($color-gray-light, 0.1) 100%)
+    top: 18rem
+    +size(100%, 60rem)
+    background-image: linear-gradient(to bottom, rgba($color-gray-light, 0.1) 5%, rgba($color-main, 0.5) 60%, rgba($color-gray-light, 0.1) 100%)
   &__title-section
     margin-bottom: 10rem
     text-align: center
@@ -426,7 +412,7 @@ section
     display: flex
     justify-content: flex-end
     align-items: center
-    margin-top: -1rem
+    margin-top: -2rem
   &__content-wrap
     display: flex
     flex-direction: column
@@ -434,7 +420,7 @@ section
     align-items: center
     padding: 5rem 7rem
     background-color: $color-main
-    border-radius: 0 5rem 5rem 5rem
+    border-radius: 0 4rem 4rem 4rem
     white-space: nowrap
   &__desc
     font-size: 1.7rem
@@ -453,6 +439,7 @@ section
     align-items: center
     padding: 7rem 4vw
     background-image: url('../img/bg-ballblack.png')
+    background-size: 30rem 22rem
   &__btn-box
     display: flex
     justify-content: center
@@ -514,7 +501,7 @@ section
     left: 0
     top: -12rem
     +size(100%, 40rem)
-    background-image: linear-gradient(to bottom, transparent 5%, rgba($color-main, 0.6) 60%, transparent 100%)
+    background-image: linear-gradient(to bottom, rgba($color-gray-light, 0.1) 5%, rgba($color-main, 0.6) 60%, rgba($color-gray-light, 0.1) 100%)
   &__content
     display: flex
     flex-direction: column
@@ -561,7 +548,7 @@ section
     left: 0
     top: 0
     +size(100%, 40rem)
-    background-image: linear-gradient(to bottom, transparent 5%, rgba($color-main, 0.6) 60%, transparent 100%)
+    background-image: linear-gradient(to bottom, rgba($color-gray-light, 0.1) 5%, rgba($color-main, 0.6) 60%, rgba($color-gray-light, 0.1) 100%)
   &__wrap
     +size(100%, 60vh)
   &__google
@@ -570,8 +557,6 @@ section
 
 @media (max-width: 1024px)
   .l-about
-    &__title-sub-wrap
-      left: 83%
     &__content
       margin-top: -32rem
     &__bg-top
@@ -597,6 +582,7 @@ section
       +size(100%, 45vw)
     &__deco
       top: 5rem
+      box-shadow: 0 0 3px $color-black-light
       &.--deco01
         +size(7rem)
       &.--deco02
@@ -604,6 +590,9 @@ section
       &.--deco03
         +size(15rem)
 
+  .l-product
+    &__deco
+      box-shadow: 0 0 3px $color-black-light
 
 @media (max-width: 767.98px)
   .l-header
@@ -615,12 +604,12 @@ section
         
   .l-about
     padding-top: 12vw
+    &::before
+      +size(100%, 250rem)
     &__title-section
       margin-bottom: 10vw
     &__story-one
       +size(100%, 50vw)
-    &__title-sub-wrap
-      left: 78%
     &__ball-row
       margin-top: 10vw
       margin-left: -18vw
@@ -701,10 +690,8 @@ section
 
 
   .l-about
-    &__title-sub-wrap
-      left: 75%
-    &__title-sub
-      padding: 1vw 3.5vw
+    &::before
+      +size(100%, 200rem)
     &__deco
       &.--deco01
         +size(4rem)
@@ -720,19 +707,18 @@ section
         +size(100%, 70vh)
     &__bg-top
       &::before
-        background-size: 20rem 15rem
         border-radius: 0 8rem 0 0
     &__text-wrap-top
       left: 30%
       top: 4%
-      padding: 1.6vw
+      padding: 1.8vw 2.5vw
       border: 1px solid $color-black-light
     &__bg-bottom
       &::before
         border-radius: 0 0 0 6rem
     &__text-wrap-bottom
       right: 20%
-      padding: 1.7vw
+      padding: 2vw
       border: 1px solid $color-black-light
 
   .l-popular
@@ -747,6 +733,10 @@ section
       margin-bottom: 8vw
     &__btn-all
       margin-top: 9vw
+
+  .l-footer
+    &__sitemap
+      background-size: 26rem 20rem
 
   .l-header-inner-product, .l-header-inner-map
     +size(100%, 65vh)
