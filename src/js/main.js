@@ -151,20 +151,20 @@ $(function() {
 
 
 // 滾動至 about
-$(function() {
-  $(window).scroll(function() {
-    if ($('.l-about')[0] !== undefined) {
-      let $about = $('.l-about')
-      let aboutTop = $about.offset().top - 100
-      let aboutBottom = $about.offset().top + $about.outerHeight() / 2.5
-      if (this.scrollY > aboutTop && this.scrollY < aboutBottom) {
-        $('body').addClass('is-about-active')
-      } else {
-        $('body').removeClass('is-about-active')
-      }
-    }
-  })
-})
+// $(function() {
+//   $(window).scroll(function() {
+//     if ($('.l-about')[0] !== undefined) {
+//       let $about = $('.l-about')
+//       let aboutTop = $about.offset().top - 100
+//       let aboutBottom = $about.offset().top + $about.outerHeight() / 2.5
+//       if (this.scrollY > aboutTop && this.scrollY < aboutBottom) {
+//         $('body').addClass('is-about-active')
+//       } else {
+//         $('body').removeClass('is-about-active')
+//       }
+//     }
+//   })
+// })
 
 
 // 滾動至 popular

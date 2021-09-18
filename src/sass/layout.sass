@@ -98,8 +98,8 @@ section
     position: absolute
     left: 0
     top: 0
-    +size(100%, 30vw)
-    background-image: linear-gradient(to bottom, $color-gray-light, rgba(0,0,0,0))
+    +size(100%, 170rem)
+    background-image: linear-gradient(to bottom, $color-gray-light 0%, $color-main 20%, $color-main 100%)
     z-index: -100
   &__title-section
     margin-bottom: 10rem
@@ -133,7 +133,7 @@ section
     white-space: nowrap
   &__deco
     top: 0
-    box-shadow: 0 0 7px $color-black-light
+    box-shadow: 0 0 5px $color-black-light
     border: 1px solid $color-black-light
     border-radius: 50%
     animation: decoMove 2s infinite
@@ -228,6 +228,7 @@ section
       top: 0
       +size(85%, 40vw)
       background-image: url('../img/bg-ballgray.png')
+      background-size: 30rem 22rem
       background-color: $color-main
       border-radius: 0 15rem 0 0
   &__img-row-top
@@ -331,9 +332,10 @@ section
     display: block
     position: absolute
     left: 0
-    top: 15vw
-    +size(100%, 50vw)
-    background-image: linear-gradient(to bottom, rgba(0,0,0,0) 5%, rgba($color-main, 0.5) 50%, rgba(0,0,0,0) 100%)
+    top: 50%
+    transform: translateY(-50%)
+    +size(100%, 80rem)
+    background-image: linear-gradient(to bottom, rgba($color-gray-light, 0.1) 0%, rgba($color-main, 0.5) 50%, rgba($color-gray-light, 0.1) 100%)
   &__title-section
     margin-bottom: 10rem
     text-align: center
@@ -381,7 +383,7 @@ section
       top: 5%
   &__deco
     border-radius: 50%
-    box-shadow: 0 0 7px $color-black-light
+    box-shadow: 0 0 5px $color-black-light
     border: 1px solid $color-black-light
     opacity: 0
     transition: 0.5s
@@ -718,6 +720,7 @@ section
         +size(100%, 70vh)
     &__bg-top
       &::before
+        background-size: 20rem 15rem
         border-radius: 0 8rem 0 0
     &__text-wrap-top
       left: 30%
