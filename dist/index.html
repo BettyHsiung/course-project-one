@@ -9,8 +9,8 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://demo-web.com">
     <meta property="og:image" content="https://demo-web.com/img/to-og-img.jpg">
-    <meta property="og:description" content="This BALL.pancakes 手燒鬆餅球｜提供鬆餅球、飲品、甜品等商品">
-    <meta name="description" content="This BALL.pancakes 手燒鬆餅球｜提供鬆餅球、飲品、甜品等商品">
+    <meta property="og:description" content="This BALL.pancakes 手燒鬆餅球｜提供鬆餅球、飲品、甜品等商品。">
+    <meta name="description" content="This BALL.pancakes 手燒鬆餅球｜提供鬆餅球、飲品、甜品等商品。">
     <link rel="shortcut icon" href="img/logo/logo-icon.png" type="image/png">
     <link rel="apple-touch-icon" href="img/logo/logo-icon.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
@@ -37,26 +37,40 @@
           <div class="c-navbar__menu">
             <ul class="c-navbar__btn-box">
               <li class="c-navbar__btn-wrap"><a class="c-navbar__btn" href="index.html#about">
-                  <div class="c-navbar__text-btn">品牌故事</div></a></li>
+                  <div class="c-navbar__text-btn --en">ABOUT</div>
+                  <div class="c-navbar__text-btn --zh">品牌故事</div></a></li>
               <li class="c-navbar__btn-wrap"><a class="c-navbar__btn" href="index.html#popular">
-                  <div class="c-navbar__text-btn">人氣商品</div></a></li>
-              <li class="c-navbar__btn-wrap"><a class="c-navbar__btn" href="products.html">
-                  <div class="c-navbar__text-btn">商品總覽</div></a></li>
-              <li class="c-navbar__btn-wrap"><a class="c-navbar__btn" href="index.html#contact">
-                  <div class="c-navbar__text-btn">店家資訊</div></a></li>
+                  <div class="c-navbar__text-btn --en">POPULAR</div>
+                  <div class="c-navbar__text-btn --zh">人氣商品</div></a></li>
+              <li class="c-navbar__btn-wrap"><a class="c-navbar__btn" href="index.html#product">
+                  <div class="c-navbar__text-btn --en">PRODUCT</div>
+                  <div class="c-navbar__text-btn --zh">商品總覽</div></a></li>
+              <li class="c-navbar__btn-wrap"><a class="c-navbar__btn" href="index.html#info">
+                  <div class="c-navbar__text-btn --en">SHOP INFO</div>
+                  <div class="c-navbar__text-btn --zh">店家資訊</div></a></li>
               <li class="c-navbar__btn-wrap"><a class="c-navbar__btn" href="map.html">
-                  <div class="c-navbar__text-btn">地圖導覽</div></a></li>
+                  <div class="c-navbar__text-btn --en">MAP</div>
+                  <div class="c-navbar__text-btn --zh">地圖導覽</div></a></li>
             </ul>
             <div class="c-navbar__link-box"><a class="c-navbar__link-wrap" href="https://www.facebook.com/This-BALLpancakes-306222823498056/" target="_blank"><i class="fab fa-facebook c-navbar__link"></i></a><a class="c-navbar__link-wrap" href="https://www.instagram.com/thisball._____/?hl=zh-tw" target="_blank"> <i class="fab fa-instagram c-navbar__link"></i></a></div>
+            <div class="c-navbar__img-mask"><img class="c-navbar__img" src="img/small-ball.png" alt="鬆餅球"></div>
           </div>
         </div>
+        <div class="c-navbar__logo-box"><a class="c-navbar__logo-mask" href="index.html"><img class="c-navbar__logo" src="img/logo/logo.png" alt="logo"></a></div>
       </nav>
-      <header class="l-header" id="header" data-aos="fade">
+      <header class="l-header" id="header">
+        <div class="l-header__ball-box --box01">
+          <div class="l-header__ball-mask --mask01 js-parallax" data-input-element=".l-header"><img class="l-header__ball-left --ball01" data-depth="0.5" src="img/big-ball.png" alt="鬆餅球"><img class="l-header__ball-left --ball02" data-depth="-0.3" src="img/big-ball.png" alt="鬆餅球"></div>
+          <div class="l-header__cup-ball-mask js-parallax" data-input-element=".l-header"><img class="l-header__cup-ball" data-depth="0.3" src="img/cup-ball.png" alt="鬆餅球"></div>
+        </div>
+        <div class="l-header__ball-box --box02">
+          <div class="l-header__ball-mask --mask02 js-parallax" data-input-element=".l-header"><img class="l-header__ball-right --ball01" data-depth="0.5" src="img/big-ball.png" alt="鬆餅球"><img class="l-header__ball-right --ball02" data-depth="-0.3" src="img/big-ball.png" alt="鬆餅球"><img class="l-header__ball-right --ball03" data-depth="0.3" src="img/big-ball.png" alt="鬆餅球"></div>
+        </div>
         <div class="l-header__content js-parallax" data-input-element=".l-header" data-aos="fade-up">
-          <div class="l-header__logo-mask" data-depth="-0.3"><img class="l-header__logo" src="img/logo/logo-icon.png" alt="logo"></div>
+          <div class="l-header__logo-mask" data-depth="-0.3"><img class="l-header__logo" src="img/logo/logo.png" alt="logo"></div>
           <h3 class="l-header__title u-title" data-depth="0.3">手燒鬆餅球</h3>
-          <p class="l-header__desc u-text-desc" data-depth="0.3">Be an imperfect circle</p>
-          <p class="l-header__desc u-text-desc" data-depth="0.3">願成為最暖的一顆球，</p>
+          <p class="l-header__desc --desc01 u-text-desc" data-depth="0.3">Be an imperfect circle</p>
+          <p class="l-header__desc u-text-desc" data-depth="0.3">願成為最暖的一顆球、</p>
           <p class="l-header__desc u-text-desc" data-depth="0.3">溫暖的一個角落。</p>
         </div>
       </header>
@@ -66,42 +80,116 @@
             <div class="row"> 
               <div class="col-md-12">
                 <div class="l-about__title-section" data-aos="fade">
-                  <h2 class="u-title-section">品牌故事</h2>
+                  <h2 class="u-title-section">ABOUT</h2>
                 </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-9 col-sm-10 col-11" data-aos="fade-right">
-                <div class="l-about__img-mask"><img class="l-about__img" src="img/about/story-one.jpg" alt="鬆餅球"></div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-12">
-                <div class="l-about__content">
-                  <h3 class="l-about__title u-title" uk-parallax="opacity: 0,1,1; y: -100,0,0; x: 100,100,0; scale: 2,1,1; viewport: 0.5;">Imperfect Circle</h3>
-                  <p class="l-about__desc u-text-desc" uk-parallax="opacity: 0,1,1; y: 100,0,0; x: -100,-100,0; scale: 0.5,1,1; viewport: 0.5;">鬆餅球，手燒保有每一顆該有的獨特，</p>
-                  <p class="l-about__desc u-text-desc" uk-parallax="opacity: 0,1,1; y: 100,0,0; x: -100,-100,0; scale: 0.5,1,1; viewport: 0.5;">圓的，但不那麼圓，也不那麼完美，</p>
-                  <p class="l-about__desc u-text-desc" uk-parallax="opacity: 0,1,1; y: 100,0,0; x: -100,-100,0; scale: 0.5,1,1; viewport: 0.5;">像人生一樣，做自己喜歡的樣子就好。</p>
-                  <p class="l-about__desc u-text-desc" uk-parallax="opacity: 0,1,1; y: 100,0,0; x: -100,-100,0; scale: 0.5,1,1; viewport: 0.5;">希望在這個世界保有一些白，</p>
-                  <p class="l-about__desc u-text-desc" uk-parallax="opacity: 0,1,1; y: 100,0,0; x: -100,-100,0; scale: 0.5,1,1; viewport: 0.5;">成為最暖的一顆球、溫暖的一個小地方。</p>
-                </div>
-              </div>
-            </div>
-            <div class="row l-about__row">
-              <div class="col-md-5 col-sm-6 col-8">
-                <div class="l-about__story-mask" data-aos="fade-up"><img class="l-about__story" src="img/about/story-two.png" alt="鬆餅球"></div>
-              </div>
-            </div>
-            <div class="row l-about__row-two">
-              <div class="col-md-4 col-sm-5 col-7">
-                <div class="l-about__story-two-mask" data-aos="fade-right"><img class="l-about__story-two" src="img/about/story-three.jpg" alt="小餐車"></div>
               </div>
             </div>
           </div>
-          <div class="container-fluid l-about__container-fluid">
+          <div class="container-fluid l-about__story-one-fluid">
             <div class="row">
-              <div class="col-md-12 l-about__cake-wrap">
-                <div class="l-about__cake u-text-cake" data-aos="fade">PANCAKES</div>
+              <div class="col-11" data-aos="fade-right">
+                <div class="l-about__story-one-box">
+                  <div class="l-about__story-one-mask">
+                    <div class="l-about__story-one" uk-parallax="bgy: -300"></div>
+                  </div>
+                  <div class="l-about__title-sub-wrap">
+                    <p class="l-about__title-sub u-title-sub" data-aos="flip-up" data-aos-delay="300">The Story</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-1">
+                <div class="l-about__deco-wrap" uk-parallax="viewport: 0.9; y: 50vh,0,-20vh">
+                  <div class="l-about__deco --deco01"></div>
+                  <div class="l-about__deco --deco02"></div>
+                  <div class="l-about__deco --deco03">              </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row l-about__ball-row">
+              <div class="col-md-3 col-4">
+                <div class="l-about__ball-mask"><img class="l-about__ball --ball01" uk-parallax="viewport: 0.9; y: 70vh,0,-110vh" src="img/big-ball.png" alt="鬆餅球"><img class="l-about__ball --ball02" uk-parallax="viewport: 0.9; y: 70vh,0,-110vh" src="img/big-ball.png" alt="鬆餅球"></div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12">
+                <div class="l-about__content">
+                  <h3 class="l-about__title u-about-title" uk-parallax="opacity: 0,1,1; y: -100,0,0; x: 100,100,0; scale: 2,1,1; viewport: 0.5;">Imperfect Circle</h3><br>
+                  <p class="l-about__desc u-content-desc" uk-parallax="opacity: 0,1,1; y: 100,0,0; x: -100,-100,0; scale: 0.5,1,1; viewport: 0.5;">鬆餅球，手燒保有每一顆該有的獨特，</p>
+                  <p class="l-about__desc u-content-desc" uk-parallax="opacity: 0,1,1; y: 100,0,0; x: -100,-100,0; scale: 0.5,1,1; viewport: 0.5;">圓的，但不那麼圓，也不那麼完美，</p>
+                  <p class="l-about__desc u-content-desc" uk-parallax="opacity: 0,1,1; y: 100,0,0; x: -100,-100,0; scale: 0.5,1,1; viewport: 0.5;">像人生一樣，做自己喜歡的樣子就好。</p><br>
+                  <p class="l-about__desc u-content-desc" uk-parallax="opacity: 0,1,1; y: 100,0,0; x: -100,-100,0; scale: 0.5,1,1; viewport: 0.5;">希望在這個世界保有一些白，</p>
+                  <p class="l-about__desc u-content-desc" uk-parallax="opacity: 0,1,1; y: 100,0,0; x: -100,-100,0; scale: 0.5,1,1; viewport: 0.5;">成為最暖的一顆球、溫暖的一個小地方。</p>
+                </div>
+              </div>
+            </div>
+            <div class="row l-about__story-two-row">
+              <div class="col-md-4 col-5">
+                <div class="l-about__story-two-mask" uk-parallax="viewport: 0.9; y: 50vh,0,-110vh"><img class="l-about__story-two" src="img/about/story02.png" alt="鬆餅球"></div>
+              </div>
+            </div>
+          </div>
+          <div class="container-fluid l-about__blockade-bg-fluid">
+            <div class="row l-about__blockade-bg-row">
+              <div class="col-md-12">
+                <div class="l-about__blockade-bg"></div>
+              </div>
+            </div>
+            <div class="row l-about__blockade-row">
+              <div class="col-md-12">
+                <div class="c-blockade">
+                  <div class="c-blockade__line-top">
+                    <div class="c-blockade__text --text01" uk-parallax="viewport: 0.9; x: -70vw,0,110vw">This BALL.pancakes</div>
+                  </div>
+                  <div class="c-blockade__line-bottom">
+                    <div class="c-blockade__text --text02" uk-parallax="viewport: 0.9; x: 70vw,0,-110vw">Be an imperfect circle</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="container-fluid">
+            <div class="row l-about__bg-row-top">
+              <div class="col-md-12">
+                <div class="l-about__bg-top" data-aos="zoom-in"></div>
+              </div>
+            </div>
+            <div class="row l-about__img-row-top">
+              <div class="col-md-8 col-11">
+                <div class="l-about__img-mask-top" data-aos="fade-right" data-aos-delay="500"><img class="l-about__img-top" src="img/about/story04.jpg" alt="鬆餅球"></div>
+                <div class="l-about__text-wrap-top" data-aos="flip-down" data-aos-delay="700">
+                  <p class="l-about__text u-text-deco"># 純牛乳闆娘自製鬆餅粉</p>
+                  <p class="l-about__text u-text-deco"># 熱熱吃最好吃</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="container-fluid">
+            <div class="row l-about__bg-row-bottom">
+              <div class="col-md-12">
+                <div class="l-about__bg-bottom" data-aos="zoom-in"></div>
+              </div>
+            </div>
+            <div class="row l-about__img-row-bottom">
+              <div class="col-md-4 col-5">
+                <div class="l-about__text-wrap-bottom" data-aos="flip-up">
+                  <p class="l-about__text u-text-deco"># 上場打球</p>
+                  <p class="l-about__text u-text-deco"># 最暖的一顆球</p>
+                  <p class="l-about__text u-text-deco"># 手燒鬆餅球</p>
+                </div>
+              </div>
+              <div class="col-md-4 col-6">
+                <div class="l-about__img-mask-bottom" data-aos="fade-up" data-aos-delay="500"><img class="l-about__img-bottom" src="img/about/story05.jpg" alt="鬆餅球"></div>
+              </div>
+            </div>
+          </div>
+          <div class="container-fluid l-about__cake-fluid">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="l-about__cake-wrap">
+                  <p class="l-about__cake u-text-cake" data-aos="fade">PANCAKES</p>
+                </div>
               </div>
             </div>
           </div>
@@ -111,105 +199,149 @@
             <div class="row"> 
               <div class="col-md-12">
                 <div class="l-popular__title-section" data-aos="fade">
-                  <h2 class="u-title-section">人氣商品</h2>
+                  <h2 class="u-title-section">POPULAR</h2>
                 </div>
               </div>
             </div>
           </div>
-          <div class="container">
-            <div class="row">
+          <div class="container-fluid">
+            <div class="row l-popular__row">
               <div class="col-md-12">
                 <div class="swiper-container l-popular__swiper" data-aos="fade-up">
                   <div class="swiper-wrapper l-popular__wrapper">
                     <div class="swiper-slide l-popular__swiper-slide">
                       <div class="c-card">
-                        <div class="c-card__img-wrap"><img src="img/popular/sugar.jpg" alt="鬆餅球"></div>
+                        <div class="c-card__img-wrap"><img src="img/popular/popular01.jpg" alt="鬆餅球"></div>
                         <div class="c-card__body">
                           <div class="c-card__content">
                             <h3 class="c-card__title">鬆餅球</h3>
-                            <p class="c-card__desc">鹽焦糖口味</p>
+                            <p class="c-card__desc"># 鹽焦糖口味</p>
                           </div>
                         </div>
                       </div>
                     </div>
                     <div class="swiper-slide l-popular__swiper-slide">
                       <div class="c-card">
-                        <div class="c-card__img-wrap"><img src="img/popular/mentaiko.jpg" alt="鬆餅球"></div>
+                        <div class="c-card__img-wrap"><img src="img/popular/popular02.jpg" alt="鬆餅球"></div>
                         <div class="c-card__body">
                           <div class="c-card__content">
                             <h3 class="c-card__title">鬆餅球</h3>
-                            <p class="c-card__desc">明太子肉鬆鬆</p>
+                            <p class="c-card__desc"># 明太子肉鬆鬆</p>
                           </div>
                         </div>
                       </div>
                     </div>
                     <div class="swiper-slide l-popular__swiper-slide">
                       <div class="c-card">
-                        <div class="c-card__img-wrap"><img src="img/popular/strwberry.jpg" alt="鬆餅球"></div>
+                        <div class="c-card__img-wrap"><img src="img/popular/popular03.jpg" alt="鬆餅球"></div>
                         <div class="c-card__body">
                           <div class="c-card__content">
                             <h3 class="c-card__title">限定口味鬆餅球</h3>
-                            <p class="c-card__desc">草莓口味</p>
+                            <p class="c-card__desc"># 草莓口味</p>
                           </div>
                         </div>
                       </div>
                     </div>
                     <div class="swiper-slide l-popular__swiper-slide">
                       <div class="c-card">
-                        <div class="c-card__img-wrap"><img src="img/popular/milktea.jpg" alt="鬆餅球"></div>
+                        <div class="c-card__img-wrap"><img src="img/popular/popular04.jpg" alt="鬆餅球"></div>
                         <div class="c-card__body">
                           <div class="c-card__content">
                             <h3 class="c-card__title">限定口味鬆餅球</h3>
-                            <p class="c-card__desc">珍珠奶茶口味</p>
+                            <p class="c-card__desc"># 珍珠奶茶口味</p>
                           </div>
                         </div>
                       </div>
                     </div>
                     <div class="swiper-slide l-popular__swiper-slide">
                       <div class="c-card">
-                        <div class="c-card__img-wrap"><img src="img/popular/taro.jpg" alt="鬆餅球"></div>
+                        <div class="c-card__img-wrap"><img src="img/popular/popular05.jpg" alt="鬆餅球"></div>
                         <div class="c-card__body">
                           <div class="c-card__content">
                             <h3 class="c-card__title">限定口味鬆餅球</h3>
-                            <p class="c-card__desc">芋頭口味</p>
+                            <p class="c-card__desc"># 芋頭口味</p>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-12">
-                <div class="l-popular__btn-all"><a class="o-btn-all" href="products.html">商品總覽</a></div>
               </div>
             </div>
           </div>
         </section>
-        <section class="l-contact" id="contact">
+        <section class="l-product" id="product">
           <div class="container">
             <div class="row"> 
               <div class="col-md-12">
-                <div class="l-contact__title-section" data-aos="fade-down">
-                  <h2 class="u-title-section">店家資訊</h2>
+                <div class="l-product__title-section" data-aos="fade">
+                  <h2 class="u-title-section">PRODUCT         </h2>
+                </div>
+              </div>
+            </div>
+            <div class="row l-product__row">
+              <div class="col-lg-4 col-sm-5 col-8" data-aos="fade-right">
+                <div class="l-product__img-mask"><img class="l-product__img" src="img/product/product01.png" alt="鬆餅球">
+                  <div class="l-product__img-after"></div>
+                  <div class="l-product__deco-wrap --wrap01">
+                    <div class="l-product__deco --deco01"></div>
+                    <div class="l-product__deco --deco02"></div>
+                    <div class="l-product__deco --deco03"></div>
+                  </div>
+                  <div class="l-product__text-wrap">
+                    <p class="l-product__text u-text-product">鬆餅球</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-sm-5 col-8" data-aos="fade-up">
+                <div class="l-product__img-mask"><img class="l-product__img" src="img/product/product02.png" alt="鬆餅球">
+                  <div class="l-product__img-after"></div>
+                  <div class="l-product__deco-wrap --wrap02">
+                    <div class="l-product__deco --deco04"></div>
+                    <div class="l-product__deco --deco05"></div>
+                    <div class="l-product__deco --deco06"></div>
+                  </div>
+                  <div class="l-product__text-wrap">
+                    <p class="l-product__text u-text-product">輕食類</p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="container" data-aos="fade-up">
+          <div class="container">
             <div class="row">
-              <div class="col-md-7 col-sm-10 col-11">
-                <div class="l-contact__img-mask" data-aos="fade-right"><img class="l-contact__img" src="img/contact/store.jpg" alt="店家"></div>
+              <div class="col-md-12">
+                <div class="l-product__btn-all" data-aos="fade-up"><a class="o-btn-all" href="product.html">More</a></div>
               </div>
-              <div class="col-md-5">
-                <div class="l-contact__content-wrap" data-aos="fade-up">
-                  <div class="l-contact__content">
-                    <p class="l-contact__desc u-contact-desc">營業時間: 11:00 - 19:00</p>
-                    <p class="l-contact__desc u-contact-desc">電話: 07-2851500</p>
-                    <p class="l-contact__desc u-contact-desc">地址: 高雄市新興區自立二路72號</p>
+            </div>
+          </div>
+        </section>
+        <section class="l-info" id="info">
+          <div class="container">
+            <div class="row"> 
+              <div class="col-md-12">
+                <div class="l-info__title-section" data-aos="fade-down">
+                  <h2 class="u-title-section">SHOP INFO</h2>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="container-fluid l-info__container-fluid" data-aos="fade-up">
+            <div class="row">
+              <div class="col-md-9 col-sm-10">
+                <div class="l-info__img-mask" data-aos="fade-right"><img class="l-info__img" src="img/shopinfo/shopinfo.jpg" alt="店家"></div>
+              </div>
+            </div>
+            <div class="row l-info__row">
+              <div class="col-lg-5 col-md-6 col-sm-7 col-11">
+                <div class="l-info__content-wrap" data-aos="fade-up">
+                  <div class="l-info__content">
+                    <p class="l-info__desc u-content-desc">營業時間: 11:00 - 19:00</p>
+                    <p class="l-info__desc u-content-desc">固定休息: 星期四</p>
+                    <p class="l-info__desc u-content-desc">電話: 07-2851500</p>
+                    <p class="l-info__desc u-content-desc">地址: 高雄市新興區自立二路72號</p>
                   </div>
-                  <div class="l-contact__btn-map"><a class="o-btn-map" href="map.html">Google Map</a></div>
+                  <div class="l-info__btn-map"><a class="o-btn-map" href="map.html">Google Map</a></div>
                 </div>
               </div>
             </div>
@@ -217,23 +349,32 @@
         </section>
       </main>
     </div>
-    <footer class="l-footer"> 
+    <footer class="l-footer">
       <div class="o-gotop">
+        <div class="o-gotop__arrow">
+          <div class="o-gotop__line --line01"></div>
+          <div class="o-gotop__line --line02"></div>
+          <div class="o-gotop__line --line03"></div>
+        </div>
         <div class="o-gotop__text">TOP</div>
       </div>
       <div class="l-footer__sitemap">
-        <div class="l-footer__slogan u-text-slogan">THIS BALL</div>
         <ul class="l-footer__btn-box">
           <li class="l-footer__btn-wrap"><a class="l-footer__btn" href="index.html#about">
-              <div class="l-footer__text-btn u-text-footer">品牌故事</div></a></li>
+              <div class="l-footer__text-btn --en u-text-footer">ABOUT</div>
+              <div class="l-footer__text-btn --zh u-text-footer">品牌故事</div></a></li>
           <li class="l-footer__btn-wrap"><a class="l-footer__btn" href="index.html#popular">
-              <div class="l-footer__text-btn u-text-footer">人氣排行</div></a></li>
-          <li class="l-footer__btn-wrap"><a class="l-footer__btn" href="products.html">
-              <div class="l-footer__text-btn u-text-footer">商品總覽</div></a></li>
-          <li class="l-footer__btn-wrap"> <a class="l-footer__btn" href="index.html#contact">
-              <div class="l-footer__text-btn u-text-footer">店家資訊</div></a></li>
+              <div class="l-footer__text-btn --en u-text-footer">POPULAR</div>
+              <div class="l-footer__text-btn --zh u-text-footer">人氣商品</div></a></li>
+          <li class="l-footer__btn-wrap"><a class="l-footer__btn" href="index.html#product">
+              <div class="l-footer__text-btn --en u-text-footer">PRODUCT</div>
+              <div class="l-footer__text-btn --zh u-text-footer">商品總覽</div></a></li>
+          <li class="l-footer__btn-wrap"> <a class="l-footer__btn" href="index.html#info">
+              <div class="l-footer__text-btn --en u-text-footer">SHOP INFO</div>
+              <div class="l-footer__text-btn --zh u-text-footer">店家資訊</div></a></li>
           <li class="l-footer__btn-wrap"><a class="l-footer__btn" href="map.html">
-              <div class="l-footer__text-btn u-text-footer">地圖導覽</div></a></li>
+              <div class="l-footer__text-btn --en u-text-footer">MAP</div>
+              <div class="l-footer__text-btn --zh u-text-footer">地圖導覽</div></a></li>
         </ul>
         <div class="l-footer__link-box"><a class="l-footer__link-wrap" href="https://www.facebook.com/This-BALLpancakes-306222823498056/" target="_blank"><i class="fab fa-facebook l-footer__link"></i></a><a class="l-footer__link-wrap" href="https://www.instagram.com/thisball._____/?hl=zh-tw" target="_blank"> <i class="fab fa-instagram l-footer__link"></i></a></div>
         <div class="l-footer__copyright u-text-copyright">@copyright This BALL All rights reserved</div>

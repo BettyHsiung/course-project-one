@@ -1,0 +1,40 @@
+doctype html
+html(lang="en")
+  head
+    include includes/config.pug
+    include includes/head.pug
+    
+    meta(property="og:title" content=title)
+    title #{title}
+
+  body
+    #app
+      
+      .u-hover-mobile
+        .u-hover-mobile__block
+
+      include includes/navbar.pug
+
+      header.l-header-inner-product(data-aos="fade-down")
+        h2.l-header-inner-product__title.u-title-section PRODUCT
+
+
+      main.main
+        section.l-inner-product
+          .container  
+            .row
+              .col-md-12
+                .l-inner-product__content(data-aos="fade-right")
+                  p.l-inner-product__desc.u-content-desc 最新菜單都在粉專唷!
+                  p.l-inner-product__desc.u-content-desc Follow us
+                  .l-inner-product__link-box(data-aos="fade-up")
+                    a.l-inner-product__link-wrap(href="https://www.facebook.com/This-BALLpancakes-306222823498056/" target="_blank")
+                      i.fab.fa-facebook.l-inner-product__link
+                    a.l-inner-product__link-wrap(href="https://www.instagram.com/thisball._____/?hl=zh-tw" target="_blank") 
+                      i.fab.fa-instagram.l-inner-product__link
+
+
+
+
+      include includes/footer.pug
+      script(src="js/main.min.js")

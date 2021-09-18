@@ -3,35 +3,30 @@
   display: inline-block
   position: fixed
   right: 4vw
-  top: 3rem
+  top: 4.2rem
   margin-top: 0
   cursor: pointer
   z-index: 999
   &:not(.is-opened):hover &
     &__line
-      background-color: $color-main
-    &__line:nth-child(1)
-      width: 5rem
-    &__line:nth-child(2)
-      width: 5rem
-  &__wrap
-    transition: 0.5s
+      width: 6rem
+      background-color: rgba($color-black-light, 0.7)
   &__line
-    +size(4rem, 3px)
-    background-color: $color-main
-    transition: 0.5s
+    +size(5.5rem, 3px)
+    background-color: $color-black-light
+    transition: 0.3s
     &:first-child
-      margin-bottom: 0.5rem
+      margin-bottom: 0.9rem
   &.is-opened &
     &__line
-      width: 3rem
+      width: 4.5rem
     &__line:nth-child(1)
-      transform: translateY(0.4rem) rotate(135deg)
+      transform: translateY(0.6rem) rotate(135deg)
     &__line:nth-child(2)
-      transform: translateY(-0.4rem) rotate(-135deg)
+      transform: translateY(-0.6rem) rotate(-135deg)
   &.is-opened:hover &
     &__line
-      background-color: $color-green
+      background-color: rgba($color-black-light, 0.7)
 
 // burger mode
 .c-navbar
@@ -41,7 +36,8 @@
     top: 0
     +size(50%, 0)
     margin-top: 0
-    background-color: rgba($color-sub, 0.9)
+    background-color: rgba($color-gray-light, 0.9)
+    background-image: url('../img/bg-ballsub.png')
     overflow: hidden
     transition: height 0.7s 0.7s
   &__menu
@@ -56,8 +52,27 @@
     opacity: 0
   &__btn-box
     text-align: center
+  &__btn:hover &
+    &__text-btn
+      color: $color-sub
+      border-left: 5px solid $color-sub
+      padding-left: 1.2rem
+    &__text-btn.--en
+      opacity: 0
+    &__text-btn.--zh
+      opacity: 1
   &__text-btn
     font-size: 2.8rem
+    transition: 0.2s
+    &.--zh
+      opacity: 0
+      left: 50%
+      transform: translate(-50%, -50%)
+  &__img-mask
+    position: absolute
+    right: 9vw
+    bottom: 5rem
+    max-width: 15rem
 
 @media (max-width: 991.98px)
   .c-navbar
@@ -80,32 +95,33 @@
   &__body
     margin-top: 0
   &__btn
-    padding: 1.5rem 0
-    transition: 0.5s
-  &__btn:hover &
-    &__text-btn
-      color: $color-green
+    padding: 1.5rem 0rem
   &__text-btn
-    font-family: $font-noto-sans
-    color: $color-main
-    font-size: 1.8rem
-    font-weight: 500
-    letter-spacing: 0.3rem
+    font-size: 2rem
+    letter-spacing: 0.2rem
     line-height: 1.5
-    transition: 0.7s
-    white-space: nowrap
+    backface-visibility: hidden
+    &.--en
+      font-family: $font-roboto
+      z-index: 2
+    &.--zh
+      position: absolute
+      left: 0
+      top: 50%
+      transform: translateY(-50%)
+      font-family: $font-noto-sans
+      white-space: nowrap
   &__link-box
     display: flex
     justify-content: flex-end
-    margin-top: 3rem
-    margin-left: 1.5rem
+    margin: 3rem 0 0 1.5rem
   &__link-wrap
     margin-right: 2rem
+    transition: 0.3s
   &__link-wrap:hover &
     &__link
-      font-size: 3.5rem
+      transform: rotate(-45deg)
   &__link
-    color: $color-main
     font-size: 3rem
     transition: 0.3s
   &.is-opened &
@@ -116,67 +132,205 @@
       transform: translateY(0)
       opacity: 1
       transition: transform 0.7s 0.7s, opacity 0.7s 0.7s
-      
+
+
+/* -- logo fixed -- */
+.c-navbar
+  &__logo-box
+    opacity: 0
+    &.is-fixed
+      position: fixed
+      left: 4vw
+      top: 2rem
+      opacity: 1
+      background-color: $color-gray-light
+      border-radius: 50%
+      transition: transform 0.8s
+  &__logo-mask
+    max-width: 9rem
+  
+
+/* -- blockade -- */
+.c-blockade
+  position: absolute
+  left: 0
+  top: 0
+  width: 100%
+  padding: 20rem 0
+  pointer-events: none
+  overflow: hidden
+  z-index: 9999
+  &__line-top
+    margin-bottom: 12rem
+  &__text
+    font-family: $font-roboto
+    font-size: 4rem
+    font-weight: 700
+    letter-spacing: 0.3rem
+    display: inline-block
+    padding: 0 9rem 0.8rem
+    white-space: nowrap
+    transition: transform 1s cubic-bezier(.23, .83, .7, 1)
+    &.--text01
+      color: $color-gray-light
+      &::after
+        content: ''
+        display: block
+        position: absolute
+        right: 0
+        bottom: 0
+        +size(100%)
+        border-right: 4.5rem solid transparent
+        border-bottom: 9rem solid $color-black-light
+        z-index: -1
+    &.--text02
+      &::after
+        content: ''
+        display: block
+        position: absolute
+        right: 0
+        bottom: 0
+        +size(100%)
+        border-left: 4.5rem solid transparent
+        border-bottom: 9rem solid $color-main
+        z-index: -1
+
+@media (max-width: 767.98px)
+  .c-blockade
+    &__text
+      font-size: 3.5rem
+      padding: 0 9vw 1.2vw
+      transition: 1s
+      &.--text01
+        &::after
+          border-right: 3.5rem solid transparent
+          border-bottom: 8rem solid $color-black-light
+      &.--text02
+        &::after
+          border-left: 3.5rem solid transparent
+          border-bottom: 8rem solid $color-main
+
+@media (max-width: 575.98px)
+  .c-blockade
+    &__text
+      font-size: 3rem
+      &.--text01
+        &::after
+          border-right: 3rem solid transparent
+          border-bottom: 7rem solid $color-black-light
+      &.--text02
+        &::after
+          border-left: 3rem solid transparent
+          border-bottom: 7rem solid $color-main
+
 
 /* -- btn all -- */
 .o-btn-all
-  font-family: $font-roboto
-  font-weight: 500
-  color: $color-gray-light
   display: inline-block
-  padding: 0.3rem 5rem
-  border-radius: 10rem
-  border: 1px solid transparent
-  background-color: $color-main
-  transition: 0.3s
+  font-family: $font-roboto
+  font-size: 1.8rem
+  font-weight: 700
+  letter-spacing: 0.3rem
+  padding: 0.8rem 6rem
+  border: 1px solid $color-black-light
+  background-color: transparent
+  transition: 0.5s linear
+  z-index: 10
   &:hover
-    color: $color-main
-    background-color: $color-gray-light
-    border: 1px solid $color-main
+    color: $color-gray-light
+  &::before
+    content: ''
+    display: block
+    position: absolute
+    left: 0
+    top: 0
+    +size(0, 100%)
+    background-color: $color-black-light
+    transition: 0.5s ease
+  &:hover::before
+    +size(100%)
+    z-index: -10
     
 
 /* -- btn map -- */
 .o-btn-map
   font-family: $font-roboto
-  font-weight: 500
-  color: $color-main
+  font-weight: 700
+  letter-spacing: 0.1rem
   display: inline-block
-  padding: 0 2rem
-  border-radius: 10rem
-  border: 1px solid $color-main
-  transition: 0.3s
+  padding: 0.9rem
+  transition: 0.3s linear
+  z-index: 10
   &:hover
-    color: $color-gray-light
-    background-color: $color-main
+    color: rgba($color-black-light, 0.7)
+  &::before
+    content: ''
+    display: block
+    position: absolute
+    left: 0
+    bottom: 0
+    +size(100%)
+    border-bottom: 2px solid $color-black-light
+    transition: 0.3s linear
+  &:hover::before
+    +size(0)
+    border-bottom: 2px solid rgba($color-black-light, 0.7)
+    z-index: -10
 
+    
 /* -- go top -- */
 .o-gotop
   display: inline-block
   position: absolute
   right: 4vw
-  bottom: 100%
-  padding: 1.2rem 0.9rem
-  border-radius: 50%
-  background-color: $color-main
-  border: 6px solid $color-sub
-  box-shadow: 0 0 5px transparent
-  color: $color-gray-light
-  text-align: center
-  user-select: none
-  cursor: pointer
-  z-index: 10
-  transition: 0.3s
-  &:hover
-    padding: 1.5rem 1.2rem
-  &:active
-    padding: 0.4rem 0.1rem
+  bottom: 30%
+  &:hover &
+    &__arrow
+      animation: arrow 0.5s both alternate
+    &__text
+      color: $color-main
+      background-color: transparent
+      border: 1px solid $color-main
+      box-shadow: 0 0 7px $color-main
+  &__arrow
+    display: flex
+    justify-content: center
+    align-items: flex-start
+  &__line
+    background-color: $color-black-light
+    &.--line01
+      +size(1px, 3rem)
+    &.--line02
+      +size(1px, 1.5rem)
+      transform: translate(-0.6rem, -0.4rem) rotate(40deg)
+    &.--line03
+      +size(1px, 1.5rem)
+      transform: translate(0.2rem, -0.4rem) rotate(-40deg)
   &__text
-    font-weight: 900
+    font-family: $font-roboto
+    font-weight: 700
+    letter-spacing: 0.1rem
+    padding: 1.4rem 1.1rem
+    background-color: $color-main
+    border-radius: 50%
+    border: 1px solid transparent
+    box-shadow: 0 0 5px transparent
+    text-align: center
+    user-select: none
+    cursor: pointer
+    z-index: 10
+    transition: 0.5s
+
+@keyframes arrow
+  0%
+    transform: translateY(15px)
+  100%
+    transform: translateY(-6px)
 
 @media (max-width: 575.98px)
   .o-gotop
-    &__text
-      font-weight: 500
+    bottom: 85%
+
 
 /* -- card -- */
 .c-card
@@ -189,19 +343,24 @@
   background-color: $color-main
   transition: 0.3s
   &:hover
-    box-shadow: 0 0 15px rgba($color-main, 0.8)
+    box-shadow: 0 0 15px rgba($color-main, 0.9)
   &__body
     display: flex
     flex-direction: column
+    justify-content: center
     align-items: center
     height: 100%
     padding: 2rem 1rem
   &__content
-    margin-bottom: 3rem
-    color: $color-sub
+    margin-bottom: 2rem
     text-align: center
   &__title
-    font-size: 1.6rem
-    font-weight: 300
+    font-size: 1.8rem
+    letter-spacing: 0.1rem
     margin-bottom: 1rem
+    white-space: nowrap
+  &__desc
+    font-size: 1.6rem
+    font-weight: 400
+    letter-spacing: 0.1rem
     white-space: nowrap

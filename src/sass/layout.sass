@@ -1,6 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500&family=Roboto:wght@300;400;700&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500&family=Roboto:wght@400;500;700;900&display=swap')
 @import './utility.sass'
 @import './component.sass'
+
 
 /* -- header -- */
 header#header
@@ -17,16 +18,69 @@ header#header
   align-items: center
   +size(100%, 100vh)
   background-color: $color-gray-light
+  &__ball-box
+    position: absolute
+    animation: circleMove 10s both alternate infinite
+    &.--box01
+      left: 10vw
+      bottom: 5%
+    &.--box02
+      right: 12vw
+      top: 10%
+  &__ball-mask
+    &.--mask01
+      transform: rotate(-30deg) !important
+      max-width: 20rem
+    &.--mask02
+      transform: rotate(-30deg) !important
+      max-width: 18rem
+  &__ball-left
+    &.--ball01
+      top: 3rem !important
+    &.--ball02
+      top: 5rem !important
+      position: relative !important
+  &__cup-ball-mask
+    transform: rotate(30deg) !important
+    max-width: 20rem
+  &__cup-ball
+    position: relative !important
+  &__ball-right
+    &.--ball01
+      left: 6rem !important
+    &.--ball02
+      position: relative !important
+      left: -3rem !important
+    &.--ball03
+      position: relative !important
   &__logo-mask
-    max-width: 80px
+    max-width: 9rem
   &__content
     text-align: center
     white-space: nowrap
+    &::before
+      content: ''
+      display: block
+      position: absolute
+      left: 0
+      top: 0
+      +size(10rem)
+      background-color: $color-main
+      border-radius: 50%
   &__title
     position: relative !important
-    margin-bottom: 1rem
+    margin-bottom: 1.2rem
   &__desc
     position: relative !important
+    &.--desc01
+      font-family: $font-roboto
+      font-weight: 600
+
+@keyframes circleMove
+  0%
+    transform: rotate(-5deg)
+  100%
+    transform: rotate(5deg)
     
 
 /* -- section -- */
@@ -38,152 +92,449 @@ section
 /* -- about -- */
 .l-about
   padding-top: 14rem
+  &::before
+    content: ''
+    display: block
+    position: absolute
+    left: 0
+    top: 0
+    +size(100%, 90rem)
+    background-image: linear-gradient(to bottom, $color-gray-light, transparent)
+    z-index: -100
   &__title-section
-    margin-bottom: 12rem
-  &__content
-    display: flex
-    flex-direction: column
-    align-items: flex-start
-    padding: 15rem 8vw
-    white-space: nowrap
-    overflow: hidden
-  &__title
-    margin-bottom: 2rem
-  &__row
-    display: flex
-    justify-content: flex-end
-    align-items: center
-  &__story-mask
-    margin-top: -28rem
-  &__row-two
-    display: flex
-    justify-content: flex-start
-    align-items: center
-  &__story-two-mask
-    margin-top: -15rem
-  &__container-fluid
+    margin-bottom: 10rem
+  &__story-one-fluid
     max-width: calc(1560px + 8vw)
     padding-left: 0
     margin-left: -4vw
+  &__story-one
+    background-image: url('../img/about/story01.jpg')
+    background-size: cover
+    background-position: center center
+    +size(100%, 40vw)
+    &::after
+      content: ''
+      display: block
+      position: absolute
+      left: 0
+      top: 0
+      +size(100%)
+      background-color: $color-main
+      mix-blend-mode: multiply
+  &__title-sub-wrap
+    position: absolute
+    left: 86%
+    top: -7%
+  &__title-sub
+    padding: 0.7rem 3.7rem
+    background-color: $color-main
+    border-radius: 0 2rem 2rem 0
+    text-align: center
+    white-space: nowrap
+  &__deco
+    top: 0
+    box-shadow: 0 0 7px $color-black-light
+    border: 1px solid $color-black-light
+    border-radius: 50%
+    animation: decoMove 2s infinite
+    &.--deco01
+      +size(10rem)
+      left: -4rem
+      animation-delay: 0.5s
+    &.--deco02
+      +size(15rem)
+      left: -2rem
+      animation-delay: 1s
+    &.--deco03
+      +size(20rem)
+      left: -15rem
+      z-index: -1
+      animation-delay: 1.5s
+  &__ball-row
+    display: flex
+    justify-content: flex-start
+    align-items: center
+    margin-top: 10rem
+    margin-left: -5rem
+    animation: storyMove 3s both alternate infinite
+  &__ball
+    &.--ball02
+      left: -2rem
+      top: -12rem
+      width: 80%
+  &__content
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    margin-top: -40rem
+    white-space: nowrap
+    overflow: hidden
+  &__story-two-row
+    display: flex
+    justify-content: flex-end
+    align-items: center
+    margin-top: -15rem
+    animation: storyMove 3s both alternate infinite
+    z-index: -20
+  &__blockade-bg-fluid
+    padding: 0
+    &::after
+      content: ''
+      display: block
+      +size(100%, 90rem)
+  &__blockade-bg-row
+    position: sticky
+    position: -webkit-sticky
+    top: 0
+    +size(100%, 100vh)
+    margin-top: 6rem
+    margin-left: 0
+  &__blockade-bg
+    position: absolute
+    left: -4vw
+    right: -4vw
+    top: 0
+    &::before
+      content: ''
+      display: block
+      +size(100%, 100vh)
+      background-image: url('../img/about/story03.jpg')
+      background-size: cover
+      background-position: center center
+    &::after
+      content: ''
+      display: block
+      position: absolute
+      left: 0
+      top: 0
+      +size(100%)
+      background-color: $color-main
+      mix-blend-mode: multiply
+  &__blockade-row
+    margin-top: -30rem
+  &__bg-row-top
+    margin-top: -12rem
+  &__bg-top
+    position: absolute
+    left: -4vw
+    right: -4vw
+    top: 0
+    &::before
+      content: ''
+      display: block
+      position: absolute
+      left: 0
+      top: 0
+      +size(85%, 40vw)
+      background-image: url('../img/bg-ballgray.png')
+      background-color: $color-main
+      border-radius: 0 15rem 0 0
+  &__img-row-top
+    display: flex
+    justify-content: flex-start
+    align-items: center
+  &__img-mask-top
+    margin-top: 14rem
+  &__text-wrap-top
+    position: absolute
+    left: 85%
+    top: 10%
+    padding: 1.5rem
+    border: 2px solid $color-black-light
+    border-radius: 0 0 0 2rem
+    white-space: nowrap
+  &__bg-row-bottom
+    margin-top: 8rem
+  &__bg-bottom
+    position: absolute
+    left: -4vw
+    right: -4vw
+    top: 0
+    &::before
+      content: ''
+      display: block
+      position: absolute
+      right: 0
+      top: 0
+      +size(65%, 30vw)
+      background-color: $color-main
+      background-image: url('../img/bg-ballgray.png')
+      border-radius: 0 0 0 12rem
+  &__img-row-bottom
+    display: flex
+    justify-content: flex-end
+    align-items: center
+  &__img-mask-bottom
+    margin-top: 15rem
+  &__text-wrap-bottom
+    position: absolute
+    right: 25%
+    bottom: 40%
+    padding: 1.2rem 1.9rem
+    border: 2px solid $color-black-light
+    border-radius: 0 2rem 0 0
+    white-space: nowrap
+  &__cake-fluid
+    max-width: calc(1560px + 8vw)
+    padding-left: 0
+    margin-left: -4vw
+  &__cake-wrap
+    margin-top: 8rem
   &__cake
     transform: rotate(-90deg)
-    margin-top: 5rem
+
+@keyframes decoMove
+  0%
+    opacity: 1
+    transform: translateY(100%)
+  100%
+    opacity: 0
+    transform: translateY(0)
+
+@keyframes storyMove
+  0%
+    transform: translateY(0)
+  100%
+    transform: translateY(10px)
 
   
+
 /* -- popular -- */
 .l-popular
-  padding-top: 18rem
+  padding-top: 10rem
+  +size(100%, 65rem)
   &__title-section
-    margin-bottom: 10rem
+    margin-bottom: 8rem
     text-align: center
+  &__row
+    position: absolute
+    left: -4vw
+    right: -4vw
+    top: 0
+    margin: 0
+    --bs-gutter-x: 0
   &__swiper
-    padding: 10px
+    padding: 15px
   &__wrapper
     transition-timing-function: linear !important
   &__swiper-slide
     width: 15rem
     height: auto
-  &__body
+
+
+/* -- product -- */
+.l-product
+  padding-top: 10rem
+  &::before
+    content: ''
+    display: block
+    position: absolute
+    left: 0
+    top: 0
+    +size(100%, 100rem)
+    background-image: linear-gradient(to bottom, transparent 20%, rgba($color-main, 0.4) 50%, transparent 100%)
+  &__title-section
+    margin-bottom: 10rem
+    text-align: center
+  &__row
     display: flex
     justify-content: center
     align-items: center
+  &__img-mask
+    animation: circleMove 3s both alternate infinite
+    transition: 0.5s
+  &__img-mask:hover &
+    &__img-after
+      opacity: 1
+    &__deco
+      opacity: 1
+      animation: decoMove 2s infinite
+      &.--deco02
+        animation-delay: 0.5s
+      &.--deco03
+        animation-delay: 1s
+      &.--deco05
+        animation-delay: 0.5s
+      &.--deco06
+        animation-delay: 1s
+    &__text-wrap
+      opacity: 1
+  &__img-after
+    display: block
+    position: absolute
+    left: 0
+    top: 0
+    +size(100%)
+    background-color: $color-main
+    border-radius: 50%
+    mix-blend-mode: multiply
+    opacity: 0
+    transition: 0.5s
+  &__deco-wrap
+    position: absolute
+    &.--wrap01
+      left: -18%
+      top: 5%
+    &.--wrap02
+      right: -18%
+      top: 5%
+  &__deco
+    border-radius: 50%
+    box-shadow: 0 0 7px $color-black-light
+    border: 1px solid $color-black-light
+    opacity: 0
+    transition: 0.5s
+    &.--deco01
+      +size(6rem)
+    &.--deco02
+      left: -35%
+      +size(8rem)
+    &.--deco03
+      left: 28%
+      +size(7rem)
+    &.--deco04
+      +size(5rem)
+    &.--deco05
+      +size(7rem)
+    &.--deco06
+      right: 25%
+      +size(6rem)
+  &__text-wrap
+    position: absolute
+    left: 50%
+    top: 50%
+    transform: translate(-50%, -50%)
+    white-space: nowrap
+    opacity: 0
+    transition: 0.5s
   &__btn-all
     display: flex
     justify-content: center
     align-items: center
-    margin-top: 10rem
-    
+    margin-top: 8rem
 
-/* -- contact -- */
-.l-contact
-  padding-top: 22rem
+
+/* -- info -- */
+.l-info
+  padding-top: 12rem
   &__title-section
-    margin-bottom: 10rem
+    margin-bottom: 8rem
+  &__row
+    display: flex
+    justify-content: flex-end
+    align-items: center
+    margin-top: -1rem
   &__content-wrap
     display: flex
     flex-direction: column
     justify-content: center
-    align-items: flex-start
-    height: 100%
+    align-items: center
+    padding: 5rem 7rem
+    background-color: $color-main
+    border-radius: 0 5rem 5rem 5rem
     white-space: nowrap
-    padding: 3vw
+  &__desc
+    font-size: 1.7rem
+    line-height: 2.2
   &__btn-map
-    margin: 3vw
+    margin-top: 1.7rem
+
 
 /* -- footer -- */
 .l-footer
-  margin-top: 30rem
+  margin-top: 12rem
   &__sitemap
     display: flex
     flex-direction: column
+    justify-content: center
     align-items: center
-    padding: 4.5rem 4vw
-    background-color: $color-sub
-  &__slogan
-    margin-bottom: 1rem
-    white-space: nowrap
+    padding: 7rem 4vw
+    background-image: url('../img/bg-ballblack.png')
   &__btn-box
     display: flex
     justify-content: center
     flex-wrap: wrap
   &__btn-wrap
     &:not(:last-child)
-      margin-right: 2.4rem
+      margin-right: 2.5rem
   &__btn:hover &
-    &__text-btn
-      color: $color-green
+    &__text-btn.--en
+      opacity: 0
+    &__text-btn.--zh
+      color: $color-sub
+      opacity: 1
   &__text-btn
     white-space: nowrap
     text-align: center
     transition: 0.3s
+    &.--zh
+      font-size: 1.6rem
+      position: absolute
+      left: 50%
+      top: 50%
+      transform: translate(-50%, -50%)
+      opacity: 0
   &__link-box
     display: flex
-    align-items: center
-    padding: 1.2rem 0 2rem
+    justify-content: flex-end
+    padding: 1.6rem 0 2rem
   &__link-wrap
     transition: 0.3s
     &:hover
-      color: $color-green
+      color: $color-sub
     &:not(:last-child)
-      margin-right: 1rem
+      margin-right: 1.2rem
+  &__link
+    font-size: 2.6rem
 
-/* -- header inner products-- */
-.l-header-inner-products
+
+/* -- header inner product-- */
+.l-header-inner-product
   display: flex
   justify-content: center
   align-items: center
   +size(100%, 100vh)
-  margin-bottom: 30rem
-  background-image: url('../img/banner/banner-ball.jpg')
+  margin-bottom: 12rem
+  background-image: url('../img/banner/banner.jpg')
   background-size: cover
   background-position: center center
-  &__logo-wrap
-    position: absolute
-    left: 4vw
-    top: 3rem
-  &__logo-mask
-    max-width: 80px
+  &__title
+    text-shadow: 2px 2px 2px $color-main
 
-/* -- products -- */
-.l-products
+
+/* -- inner product -- */
+.l-inner-product
+  &::before
+    content: ''
+    display: block
+    position: absolute
+    left: 0
+    top: -12rem
+    +size(100%, 40rem)
+    background-image: linear-gradient(to bottom, transparent 5%, rgba($color-main, 0.6) 60%, transparent 100%)
   &__content
     display: flex
     flex-direction: column
     justify-content: center
     align-items: center
   &__desc
+    letter-spacing: 0.5rem
     margin-bottom: 2rem
   &__link-box
     display: flex
-    padding: 1.2rem 0 2rem
+    padding: 1rem 0.7rem 0
   &__link-wrap
     transition: 0.3s
-    &:hover
-      color: $color-green
     &:not(:last-child)
-      margin-right: 1rem
+      margin-right: 1.5rem
+  &__link-wrap:hover &
+    &__link
+      color: $color-sub
+      transform: rotate(-45deg)
   &__link
-    font-size: 3rem
+    font-size: 4rem
+    transition: 0.3s
 
 
 /* -- header inner map-- */
@@ -192,86 +543,214 @@ section
   justify-content: center
   align-items: center
   +size(100%, 100vh)
-  margin-bottom: 30rem
-  background-image: url('../img/banner/banner-ball.jpg')
+  margin-bottom: 12rem
+  background-image: url('../img/banner/banner.jpg')
   background-size: cover
   background-position: center center
-  &__logo-wrap
-    position: absolute
-    left: 4vw
-    top: 3rem
-  &__logo-mask
-    max-width: 80px
+  &__title
+    text-shadow: 2px 2px 2px $color-main
 
 /* -- map -- */
 .l-map
+  &::before
+    content: ''
+    display: block
+    position: absolute
+    left: 0
+    top: 0
+    +size(100%, 40rem)
+    background-image: linear-gradient(to bottom, transparent 5%, rgba($color-main, 0.6) 60%, transparent 100%)
   &__wrap
-    +size(100%, 45vh)
+    +size(100%, 60vh)
   &__google
     +size(100%)
 
 
 @media (max-width: 1024px)
   .l-about
-    &__story-mask
-      margin-top: -15rem
-    &__story-two-mask
-      margin-top: -10rem
+    &__title-sub-wrap
+      left: 83%
     &__content
-      padding: 6vw
+      margin-top: -32rem
+    &__bg-top
+      &::before
+        border-radius: 0 12rem 0 0
+    &__bg-bottom
+      &::before
+        border-radius: 0 0 0 9rem
 
 @media (max-width: 1024px) and (orientation: portrait)
+  .l-about
+    &__blockade-bg-row
+      +size(100%, 80vh)
+    &__blockade-bg
+      &::before
+        +size(100%, 80vh)
+    &__blockade-row
+      margin-top: -40vw
 
 @media (max-width: 991.98px)
+  .l-about
+    &__story-one
+      +size(100%, 45vw)
+    &__deco
+      top: 5rem
+      &.--deco01
+        +size(7rem)
+      &.--deco02
+        +size(10rem)
+      &.--deco03
+        +size(15rem)
+
 
 @media (max-width: 767.98px)
+  .l-header
+    &__ball-box
+      &.--box01
+        left: 3vw
+      &.--box02
+        right: 8vw
+        
   .l-about
+    padding-top: 12vw
+    &__title-section
+      margin-bottom: 10vw
+    &__story-one
+      +size(100%, 50vw)
+    &__title-sub-wrap
+      left: 78%
+    &__ball-row
+      margin-top: 10vw
+      margin-left: -18vw
+    &__ball
+      &.--ball02
+        top: -15vw
+    &__content
+      margin-top: -40vw
+    &__story-two-row
+      margin-top: -15vw
+    &__blockade-bg-row
+      +size(100%, 80vh)
+    &__blockade-bg
+      &::before
+        +size(100%, 80vh)
+    &__blockade-row
+      margin-top: -40vw
+    &__bg-row-top
+      margin-top: -12vw
+    &__bg-top
+      &::before
+        +size(95%, 55vw)
+    &__img-mask-top
+      margin-top: 20vw
+    &__text-wrap-top
+      left: 45%
+      top: 6%
+    &__bg-row-bottom
+      margin-top: 15vw
+    &__bg-bottom
+      &::before
+        +size(85%, 40vw)
+    &__img-mask-bottom
+      margin-top: 15vw
+    &__text-wrap-bottom
+      right: 15%
+
+  .l-product
+    &__deco
+      &.--deco01, &.--deco04
+        +size(3rem)
+      &.--deco02, &.--deco05
+        +size(5rem)
+      &.--deco03, &.--deco06
+        +size(4rem)
+
+  .l-info
     padding-top: 16vw
     &__title-section
-      margin-bottom: 12vw
-    // &__container
-    //   margin-left: auto
-    //   padding-left: var(--bs-gutter-x, .75rem)
-    &__content
-      padding: 9vw
-    &__story-mask
-      margin-top: -5vw
-    &__story-two-mask
-      margin-top: -15vw
+      margin-bottom: 8vw
 
-  .l-popular
-    padding-top: 17vw
 
-  .l-contact
-    padding-top: 22vw
-    &__title-section
-      margin-bottom: 12vw
-    &__content-wrap
-      padding: 8vw
 
 @media (max-width: 575.98px)
-  .l-about
-    padding-top: 17vw
-    &__title-section
-      margin-bottom: 14vw
-    &__title
-      font-size: 2.7rem
-      letter-spacing: 0.5rem
-    &__desc
-      letter-spacing: 0.3rem
-    &__content
-      padding: 10vw 5vw
-    &__story-mask
-      margin-top: 0
-    &__story-two-mask
-      margin-top: -16vw
+  .l-header
+    &__ball-box
+      &.--box01
+        bottom: 0
+      &.--box02
+        right: 20vw
+        top: 0
+    &__ball-mask
+      &.--mask01
+        transform: rotate(40deg) !important
+        max-width: 14rem
+      &.--mask02
+        transform: rotate(-80deg) !important
+        max-width: 12rem
+    &__ball-left
+      &.--ball01
+        left: 60vw !important
+        top: 10vw !important
+      &.--ball02
+        left: 40vw !important
+        top: -5vw !important
+    &__cup-ball-mask
+      max-width: 16rem
 
-  .l-contact
-    padding-top: 30vw
+
+  .l-about
+    &__title-sub-wrap
+      left: 75%
+    &__title-sub
+      padding: 1vw 3.5vw
+    &__deco
+      &.--deco01
+        +size(4rem)
+      &.--deco02
+        +size(5rem)
+      &.--deco03
+        +size(7rem)
+        left: -10vw
+    &__blockade-bg-row
+      +size(100%, 70vh)
+    &__blockade-bg
+      &::before
+        +size(100%, 70vh)
+    &__bg-top
+      &::before
+        border-radius: 0 8rem 0 0
+    &__text-wrap-top
+      left: 30%
+      top: 4%
+      padding: 1.6vw
+    &__bg-bottom
+      &::before
+        border-radius: 0 0 0 6rem
+    &__text-wrap-bottom
+      right: 20%
+      padding: 1.7vw
+
+  .l-popular
+    padding-top: 16vw
+    +size(100%, 50rem)
     &__title-section
-      margin-bottom: 16vw
-    &__content-wrap
-      padding: 10vw 5vw
+      margin-bottom: 10vw
+
+  .l-product
+    padding-top: 25vw
+    &__title-section
+      margin-bottom: 8vw
+    &__btn-all
+      margin-top: 9vw
+
+  .l-header-inner-product, .l-header-inner-map
+    +size(100%, 65vh)
+
+
+
+    
+
+
 
 
 

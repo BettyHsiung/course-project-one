@@ -16,14 +16,29 @@ html(lang="en")
       include includes/navbar.pug
 
 
-      header#header.l-header(data-aos="fade")
+
+      header#header.l-header
+        .l-header__ball-box.--box01
+          .l-header__ball-mask.--mask01.js-parallax(data-input-element=".l-header")
+            img.l-header__ball-left.--ball01(data-depth="0.5")(src="img/big-ball.png", alt="鬆餅球")
+            img.l-header__ball-left.--ball02(data-depth="-0.3")(src="img/big-ball.png", alt="鬆餅球")
+          .l-header__cup-ball-mask.js-parallax(data-input-element=".l-header")
+            img.l-header__cup-ball(data-depth="0.3")(src="img/cup-ball.png", alt="鬆餅球")
+
+        .l-header__ball-box.--box02
+          .l-header__ball-mask.--mask02.js-parallax(data-input-element=".l-header")
+            img.l-header__ball-right.--ball01(data-depth="0.5")(src="img/big-ball.png", alt="鬆餅球")
+            img.l-header__ball-right.--ball02(data-depth="-0.3")(src="img/big-ball.png", alt="鬆餅球")
+            img.l-header__ball-right.--ball03(data-depth="0.3")(src="img/big-ball.png", alt="鬆餅球")
+
         .l-header__content.js-parallax(data-input-element=".l-header" data-aos="fade-up")
           .l-header__logo-mask(data-depth="-0.3")
-            img.l-header__logo(src="img/logo/logo-icon.png", alt="logo")
+            img.l-header__logo(src="img/logo/logo.png", alt="logo")
           h3.l-header__title.u-title(data-depth="0.3") 手燒鬆餅球
-          p.l-header__desc.u-text-desc(data-depth="0.3") Be an imperfect circle
-          p.l-header__desc.u-text-desc(data-depth="0.3") 願成為最暖的一顆球，
+          p.l-header__desc.--desc01.u-text-desc(data-depth="0.3") Be an imperfect circle
+          p.l-header__desc.u-text-desc(data-depth="0.3") 願成為最暖的一顆球、
           p.l-header__desc.u-text-desc(data-depth="0.3") 溫暖的一個角落。
+
 
 
       main.main
@@ -32,126 +47,227 @@ html(lang="en")
             .row 
               .col-md-12
                 .l-about__title-section(data-aos="fade")
-                  h2.u-title-section 品牌故事
+                  h2.u-title-section ABOUT
+
+          .container-fluid.l-about__story-one-fluid
+            .row
+              .col-11(data-aos="fade-right")
+                .l-about__story-one-box
+                  .l-about__story-one-mask
+                    .l-about__story-one(uk-parallax="bgy: -300")
+                  .l-about__title-sub-wrap
+                    p.l-about__title-sub.u-title-sub(data-aos="flip-up" data-aos-delay="300") The Story
+              
+              .col-1
+                .l-about__deco-wrap(uk-parallax="viewport: 0.9; y: 50vh,0,-20vh")
+                  .l-about__deco.--deco01
+                  .l-about__deco.--deco02
+                  .l-about__deco.--deco03               
+
+          .container
+            .row.l-about__ball-row
+              .col-md-3.col-4
+                .l-about__ball-mask
+                  img.l-about__ball.--ball01(uk-parallax="viewport: 0.9; y: 70vh,0,-110vh")(src="img/big-ball.png", alt="鬆餅球")
+                  img.l-about__ball.--ball02(uk-parallax="viewport: 0.9; y: 70vh,0,-110vh")(src="img/big-ball.png", alt="鬆餅球")
 
             .row
-              .col-md-9.col-sm-10.col-11(data-aos="fade-right")
-                .l-about__img-mask
-                  img.l-about__img(src="img/about/story-one.jpg", alt="鬆餅球")
+              .col-12
+                .l-about__content
+                  h3.l-about__title.u-about-title(uk-parallax='opacity: 0,1,1; y: -100,0,0; x: 100,100,0; scale: 2,1,1; viewport: 0.5;') Imperfect Circle
+                  br
+                  p.l-about__desc.u-content-desc(uk-parallax='opacity: 0,1,1; y: 100,0,0; x: -100,-100,0; scale: 0.5,1,1; viewport: 0.5;') 鬆餅球，手燒保有每一顆該有的獨特，
+                  p.l-about__desc.u-content-desc(uk-parallax='opacity: 0,1,1; y: 100,0,0; x: -100,-100,0; scale: 0.5,1,1; viewport: 0.5;') 圓的，但不那麼圓，也不那麼完美，
+                  p.l-about__desc.u-content-desc(uk-parallax='opacity: 0,1,1; y: 100,0,0; x: -100,-100,0; scale: 0.5,1,1; viewport: 0.5;') 像人生一樣，做自己喜歡的樣子就好。
+                  br
+                  p.l-about__desc.u-content-desc(uk-parallax='opacity: 0,1,1; y: 100,0,0; x: -100,-100,0; scale: 0.5,1,1; viewport: 0.5;') 希望在這個世界保有一些白，
+                  p.l-about__desc.u-content-desc(uk-parallax='opacity: 0,1,1; y: 100,0,0; x: -100,-100,0; scale: 0.5,1,1; viewport: 0.5;') 成為最暖的一顆球、溫暖的一個小地方。
+  
+            .row.l-about__story-two-row
+              .col-md-4.col-5
+                .l-about__story-two-mask(uk-parallax="viewport: 0.9; y: 50vh,0,-110vh")
+                  img.l-about__story-two(src="img/about/story02.png", alt="鬆餅球")
+
+          .container-fluid.l-about__blockade-bg-fluid
+            .row.l-about__blockade-bg-row
+              .col-md-12
+                .l-about__blockade-bg
+
+            .row.l-about__blockade-row
+              .col-md-12
+                .c-blockade
+                  .c-blockade__line-top
+                    .c-blockade__text.--text01(uk-parallax="viewport: 0.9; x: -70vw,0,110vw") This BALL.pancakes
+                  .c-blockade__line-bottom
+                    .c-blockade__text.--text02(uk-parallax="viewport: 0.9; x: 70vw,0,-110vw") Be an imperfect circle
+
+          .container-fluid
+            .row.l-about__bg-row-top
+              .col-md-12
+                .l-about__bg-top(data-aos="zoom-in")
+
+            .row.l-about__img-row-top
+              .col-md-8.col-11
+                .l-about__img-mask-top(data-aos="fade-right" data-aos-delay="500")
+                  img.l-about__img-top(src="img/about/story04.jpg", alt="鬆餅球")
+                .l-about__text-wrap-top(data-aos="flip-down" data-aos-delay="700")
+                  p.l-about__text.u-text-deco # 純牛乳闆娘自製鬆餅粉
+                  p.l-about__text.u-text-deco # 熱熱吃最好吃
 
 
+          .container-fluid
+            .row.l-about__bg-row-bottom
+              .col-md-12
+                .l-about__bg-bottom(data-aos="zoom-in")
+
+            .row.l-about__img-row-bottom
+              .col-md-4.col-5
+                .l-about__text-wrap-bottom(data-aos="flip-up")
+                  p.l-about__text.u-text-deco # 上場打球
+                  p.l-about__text.u-text-deco # 最暖的一顆球
+                  p.l-about__text.u-text-deco # 手燒鬆餅球
+
+              .col-md-4.col-6
+                .l-about__img-mask-bottom(data-aos="fade-up" data-aos-delay="500")
+                  img.l-about__img-bottom(src="img/about/story05.jpg", alt="鬆餅球")
+                  
+
+          .container-fluid.l-about__cake-fluid
             .row
               .col-md-12
-                  .l-about__content
-                    h3.l-about__title.u-title(uk-parallax='opacity: 0,1,1; y: -100,0,0; x: 100,100,0; scale: 2,1,1; viewport: 0.5;') Imperfect Circle
-                    p.l-about__desc.u-text-desc(uk-parallax='opacity: 0,1,1; y: 100,0,0; x: -100,-100,0; scale: 0.5,1,1; viewport: 0.5;') 鬆餅球，手燒保有每一顆該有的獨特，
-                    p.l-about__desc.u-text-desc(uk-parallax='opacity: 0,1,1; y: 100,0,0; x: -100,-100,0; scale: 0.5,1,1; viewport: 0.5;') 圓的，但不那麼圓，也不那麼完美，
-                    p.l-about__desc.u-text-desc(uk-parallax='opacity: 0,1,1; y: 100,0,0; x: -100,-100,0; scale: 0.5,1,1; viewport: 0.5;') 像人生一樣，做自己喜歡的樣子就好。
-                    p.l-about__desc.u-text-desc(uk-parallax='opacity: 0,1,1; y: 100,0,0; x: -100,-100,0; scale: 0.5,1,1; viewport: 0.5;') 希望在這個世界保有一些白，
-                    p.l-about__desc.u-text-desc(uk-parallax='opacity: 0,1,1; y: 100,0,0; x: -100,-100,0; scale: 0.5,1,1; viewport: 0.5;') 成為最暖的一顆球、溫暖的一個小地方。
-
-            .row.l-about__row
-              .col-md-5.col-sm-6.col-8
-                .l-about__story-mask(data-aos="fade-up")
-                  img.l-about__story(src="img/about/story-two.png", alt="鬆餅球")
-
-            .row.l-about__row-two
-              .col-md-4.col-sm-5.col-7
-                .l-about__story-two-mask(data-aos="fade-right")
-                  img.l-about__story-two(src="img/about/story-three.jpg", alt="小餐車")
+                .l-about__cake-wrap
+                  p.l-about__cake.u-text-cake(data-aos="fade") PANCAKES
 
 
-          .container-fluid.l-about__container-fluid
-            .row
-              .col-md-12.l-about__cake-wrap
-                .l-about__cake.u-text-cake(data-aos="fade") PANCAKES
 
         section#popular.l-popular
           .container
             .row 
               .col-md-12
                 .l-popular__title-section(data-aos="fade")
-                  h2.u-title-section 人氣商品
+                  h2.u-title-section POPULAR
 
-          .container
-            .row
+
+          .container-fluid
+            .row.l-popular__row
               .col-md-12
                 .swiper-container.l-popular__swiper(data-aos="fade-up")
                   .swiper-wrapper.l-popular__wrapper
                     .swiper-slide.l-popular__swiper-slide
                       .c-card
                         .c-card__img-wrap
-                          img(src="img/popular/sugar.jpg", alt="鬆餅球")
+                          img(src="img/popular/popular01.jpg", alt="鬆餅球")
                         .c-card__body
                           .c-card__content
                             h3.c-card__title 鬆餅球
-                            p.c-card__desc 鹽焦糖口味
+                            p.c-card__desc # 鹽焦糖口味
 
                     .swiper-slide.l-popular__swiper-slide
                       .c-card
                         .c-card__img-wrap
-                          img(src="img/popular/mentaiko.jpg", alt="鬆餅球")
+                          img(src="img/popular/popular02.jpg", alt="鬆餅球")
                         .c-card__body
                           .c-card__content
                             h3.c-card__title 鬆餅球
-                            p.c-card__desc 明太子肉鬆鬆
-
-
-                    .swiper-slide.l-popular__swiper-slide
-                      .c-card
-                        .c-card__img-wrap
-                          img(src="img/popular/strwberry.jpg", alt="鬆餅球")
-                        .c-card__body
-                          .c-card__content
-                            h3.c-card__title 限定口味鬆餅球
-                            p.c-card__desc 草莓口味
+                            p.c-card__desc # 明太子肉鬆鬆
 
                     .swiper-slide.l-popular__swiper-slide
                       .c-card
                         .c-card__img-wrap
-                          img(src="img/popular/milktea.jpg", alt="鬆餅球")
+                          img(src="img/popular/popular03.jpg", alt="鬆餅球")
                         .c-card__body
                           .c-card__content
                             h3.c-card__title 限定口味鬆餅球
-                            p.c-card__desc 珍珠奶茶口味
+                            p.c-card__desc # 草莓口味
 
                     .swiper-slide.l-popular__swiper-slide
                       .c-card
                         .c-card__img-wrap
-                          img(src="img/popular/taro.jpg", alt="鬆餅球")
+                          img(src="img/popular/popular04.jpg", alt="鬆餅球")
                         .c-card__body
                           .c-card__content
                             h3.c-card__title 限定口味鬆餅球
-                            p.c-card__desc 芋頭口味
+                            p.c-card__desc # 珍珠奶茶口味
 
+                    .swiper-slide.l-popular__swiper-slide
+                      .c-card
+                        .c-card__img-wrap
+                          img(src="img/popular/popular05.jpg", alt="鬆餅球")
+                        .c-card__body
+                          .c-card__content
+                            h3.c-card__title 限定口味鬆餅球
+                            p.c-card__desc # 芋頭口味
+
+
+
+        section#product.l-product
+          .container
+            .row 
+              .col-md-12
+                .l-product__title-section(data-aos="fade")
+                  h2.u-title-section PRODUCT         
+
+            .row.l-product__row
+              .col-lg-4.col-sm-5.col-8(data-aos="fade-right")
+                .l-product__img-mask
+                  img.l-product__img(src="img/product/product01.png", alt="鬆餅球")
+                  .l-product__img-after
+                  .l-product__deco-wrap.--wrap01
+                    .l-product__deco.--deco01
+                    .l-product__deco.--deco02
+                    .l-product__deco.--deco03
+                  .l-product__text-wrap
+                    p.l-product__text.u-text-product 鬆餅球
+  
+              .col-lg-4.col-sm-5.col-8(data-aos="fade-up")
+                .l-product__img-mask
+                  img.l-product__img(src="img/product/product02.png", alt="鬆餅球")
+                  .l-product__img-after
+                  .l-product__deco-wrap.--wrap02
+                    .l-product__deco.--deco04
+                    .l-product__deco.--deco05
+                    .l-product__deco.--deco06
+                  .l-product__text-wrap
+                    p.l-product__text.u-text-product 輕食類
+
+
+          .container
             .row
               .col-md-12
-                  .l-popular__btn-all
-                    a.o-btn-all(href="products.html") 商品總覽
+                  .l-product__btn-all(data-aos="fade-up")
+                    a.o-btn-all(href="product.html") More
 
-        section#contact.l-contact
+
+
+        section#info.l-info
           .container
               .row 
                 .col-md-12
-                  .l-contact__title-section(data-aos="fade-down")
-                    h2.u-title-section 店家資訊
+                  .l-info__title-section(data-aos="fade-down")
+                    h2.u-title-section SHOP INFO
 
-          .container(data-aos="fade-up")
+
+          .container-fluid.l-info__container-fluid(data-aos="fade-up")
             .row
-              .col-md-7.col-sm-10.col-11
-                .l-contact__img-mask(data-aos="fade-right")
-                  img.l-contact__img(src="img/contact/store.jpg", alt="店家")
+              .col-md-9.col-sm-10
+                .l-info__img-mask(data-aos="fade-right")
+                  img.l-info__img(src="img/shopinfo/shopinfo.jpg", alt="店家")
 
-              .col-md-5
-                .l-contact__content-wrap(data-aos="fade-up")
-                  .l-contact__content
-                    p.l-contact__desc.u-contact-desc 營業時間: 11:00 - 19:00
-                    p.l-contact__desc.u-contact-desc 電話: 07-2851500
-                    p.l-contact__desc.u-contact-desc 地址: 高雄市新興區自立二路72號
-                  .l-contact__btn-map
+            .row.l-info__row
+              .col-lg-5.col-md-6.col-sm-7.col-11
+                .l-info__content-wrap(data-aos="fade-up")
+                  .l-info__content
+                    p.l-info__desc.u-content-desc 營業時間: 11:00 - 19:00
+                    p.l-info__desc.u-content-desc 固定休息: 星期四
+                    p.l-info__desc.u-content-desc 電話: 07-2851500
+                    p.l-info__desc.u-content-desc 地址: 高雄市新興區自立二路72號
+                  .l-info__btn-map
                     a.o-btn-map(href="map.html") Google Map
 
+
+
     include includes/footer.pug           
+
 
     script(src="js/uikit.min.js")
     script(src="js/parallax.min.js")

@@ -45,20 +45,29 @@ $(function() {
 })
 
 
+
 // -- navbar
 $(function() {
-  // ! 表示否定
   if (!$('#app').hasClass('is-home')) {
-    $('.c-navbar').addClass('is-fixed')
+    $('.c-navbar__logo-box').addClass('is-fixed')
   }
+  $(window).scroll(function() {
+    if ( $('#app').hasClass('is-home') ) {
+      if ( $(this).scrollTop() > $('.l-header').outerHeight() / 2 ) {
+        $('.c-navbar__logo-box').addClass('is-fixed')
+      } else {
+        $('.c-navbar__logo-box').removeClass('is-fixed')
+      }
+    }
+  })
 })
 
 $(function() {
   let balls = []
   let gradients = [
-    'radial-gradient(circle at 50% 50%, rgba(255, 244, 232, 0.3), rgba(255, 249, 240, 0) 61%)',
-    'radial-gradient(circle at 50% 50%, rgba(255, 244, 232, 0.3), rgba(255, 249, 240, 0) 75%)',
-    'radial-gradient(circle at 50% 50%, rgba(247, 231, 215, 0.3), rgba(255, 249, 240, 0) 70%)'
+    'radial-gradient(circle at 50% 50%, rgba(255, 242, 235, 0.1), rgba(255, 242, 235, 0) 61%)',
+    'radial-gradient(circle at 50% 50%, rgba(255, 242, 235, 0.1), rgba(255, 242, 235, 0) 75%)',
+    'radial-gradient(circle at 50% 50%, rgba(255, 218, 199, 0.1), rgba(255, 242, 235, 0) 70%)'
   ]
   let Ball = function(el, options) {
     this.setting = {
@@ -140,12 +149,13 @@ $(function() {
   })
 })
 
+
 // 滾動至 about
 $(function() {
   $(window).scroll(function() {
     if ($('.l-about')[0] !== undefined) {
       let $about = $('.l-about')
-      let aboutTop = $about.offset().top - 300
+      let aboutTop = $about.offset().top - 100
       let aboutBottom = $about.offset().top + $about.outerHeight() / 2
       if (this.scrollY > aboutTop && this.scrollY < aboutBottom) {
         $('body').addClass('is-about-active')
@@ -156,17 +166,18 @@ $(function() {
   })
 })
 
-// 滾動至 contact
+
+// 滾動至 popular
 $(function() {
   $(window).scroll(function() {
-    if ($('.l-contact')[0] !== undefined) {
-      let $contact = $('.l-contact')
-      let contactTop = $contact.offset().top - 300
-      let contactBottom = $contact.offset().top + $contact.outerHeight() / 2
-      if (this.scrollY > contactTop && this.scrollY < contactBottom) {
-        $('body').addClass('is-contact-active')
+    if ($('.l-popular')[0] !== undefined) {
+      let $popular = $('.l-popular')
+      let popularTop = $popular.offset().top - 300
+      let popularBottom = $popular.offset().top + $popular.outerHeight() + 300
+      if (this.scrollY > popularTop && this.scrollY < popularBottom) {
+        $('body').addClass('is-popular-active')
       } else {
-        $('body').removeClass('is-contact-active')
+        $('body').removeClass('is-popular-active')
       }
     }
   })
@@ -199,17 +210,20 @@ $(function() {
       loop: true,
       loopslides: 20,
       speed: 5000,
-      slidesPerView : 1.5,
+      slidesPerView : 2,
       autoplay: {
         delay: 0,
         disableOnInteraction: false,
       },
       breakpoints: {
+        1024: {
+          slidesPerView: 4.5,
+        },
         992: {
           slidesPerView: 4,
         },
         768: {
-          slidesPerView: 3,
+          slidesPerView: 3.5,
         },
         576: {
           slidesPerView: 3,
