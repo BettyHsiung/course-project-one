@@ -62,92 +62,92 @@ $(function() {
   })
 })
 
-$(function() {
-  let balls = []
-  let gradients = [
-    'radial-gradient(circle at 50% 50%, rgba(255, 242, 235, 0.1), rgba(255, 242, 235, 0) 61%)',
-    'radial-gradient(circle at 50% 50%, rgba(255, 242, 235, 0.1), rgba(255, 242, 235, 0) 75%)',
-    'radial-gradient(circle at 50% 50%, rgba(255, 218, 199, 0.1), rgba(255, 242, 235, 0) 70%)'
-  ]
-  let Ball = function(el, options) {
-    this.setting = {
-      minSpeed: null,
-      maxSpeed: null
-    }
-    this.setting = $.extend(this.settings, options)
-    this.el = el
-    this.div = document.createElement('div')
-    this.div.className = 'moving-ball';
-    this.randomWidth = this.random(400, 800)
-    this.div.style.width = this.randomWidth + 'px'
-    this.div.style.height = this.randomWidth + 'px'
-    this.div.style.backgroundImage = gradients[Math.floor(Math.random() * gradients.length)]
-    this.speedX = this.random(this.setting.minSpeed, this.setting.maxSpeed);
-    this.speedY = this.random(this.setting.minSpeed, this.setting.maxSpeed);
-    this.x = this.random(0, $(window).innerWidth())
-    this.y = this.random(0, this.el.height())
-  }
-  Ball.prototype.random = function (min, max) {
-    return Math.random() * (max - min) + min
-  }
-  Ball.prototype.draw = function () {
-    this.div.style.left = this.x + 'px'
-    this.div.style.top = this.y + 'px'
-  }
-  Ball.prototype.update = function () {
-    this.x += this.speedX
-    this.y += this.speedY
-    if (this.x < 0 - this.randomWidth/2) {
-      this.x = 0 - this.randomWidth/2;
-      this.speedX *= -1
-    }
-    if (this.y < 0 - this.randomWidth/2) {
-      this.y = 0 - this.randomWidth/2;
-      this.speedY *= -1
-    }
-    if (this.x > $(window).innerWidth() - this.randomWidth/2) {
-      this.x = $(window).innerWidth() - this.randomWidth/2
-      this.speedX *= -1
-    }
-    if (this.y > this.el.height() - this.randomWidth/2) {
-      this.y = this.el.height() - this.randomWidth/2
-      this.speedY *= -1
-    }
-  }
-  let BallMoving = function(el, options) {
-    this.setting = {
-      num: 4,
-      minSpeed: 2,
-      maxSpeed: 6
-    }
-    this.el = el
-    this.setting = $.extend(this.settings, options)
-    this.createBall()
-    this.start()
-  }
-  BallMoving.prototype.createBall = function() {
-    for(let i = 0; i< this.setting.num; i++) {
-      let ball = new Ball(this.el, {
-        minSpeed: this.setting.minSpeed,
-        maxSpeed: this.setting.maxSpeed
-      });
-      this.el.append(ball.div);
-      balls.push(ball);
-    }
-  }
-  BallMoving.prototype.start = function() {
-    for (let i = 0; i < balls.length; i++) {
-      balls[i].draw()
-      balls[i].update()
-    }
-    requestAnimationFrame(this.start.bind(this))
-  }
-  new BallMoving($('header#header'), {
-    num: 8,
-    minSpeed: 2,
-    maxSpeed: 6
-  })
-})
+// $(function() {
+//   let balls = []
+//   let gradients = [
+//     'radial-gradient(circle at 50% 50%, rgba(255, 242, 235, 0.1), rgba(255, 242, 235, 0) 61%)',
+//     'radial-gradient(circle at 50% 50%, rgba(255, 242, 235, 0.1), rgba(255, 242, 235, 0) 75%)',
+//     'radial-gradient(circle at 50% 50%, rgba(255, 218, 199, 0.1), rgba(255, 242, 235, 0) 70%)'
+//   ]
+//   let Ball = function(el, options) {
+//     this.setting = {
+//       minSpeed: null,
+//       maxSpeed: null
+//     }
+//     this.setting = $.extend(this.settings, options)
+//     this.el = el
+//     this.div = document.createElement('div')
+//     this.div.className = 'moving-ball';
+//     this.randomWidth = this.random(400, 800)
+//     this.div.style.width = this.randomWidth + 'px'
+//     this.div.style.height = this.randomWidth + 'px'
+//     this.div.style.backgroundImage = gradients[Math.floor(Math.random() * gradients.length)]
+//     this.speedX = this.random(this.setting.minSpeed, this.setting.maxSpeed);
+//     this.speedY = this.random(this.setting.minSpeed, this.setting.maxSpeed);
+//     this.x = this.random(0, $(window).innerWidth())
+//     this.y = this.random(0, this.el.height())
+//   }
+//   Ball.prototype.random = function (min, max) {
+//     return Math.random() * (max - min) + min
+//   }
+//   Ball.prototype.draw = function () {
+//     this.div.style.left = this.x + 'px'
+//     this.div.style.top = this.y + 'px'
+//   }
+//   Ball.prototype.update = function () {
+//     this.x += this.speedX
+//     this.y += this.speedY
+//     if (this.x < 0 - this.randomWidth/2) {
+//       this.x = 0 - this.randomWidth/2;
+//       this.speedX *= -1
+//     }
+//     if (this.y < 0 - this.randomWidth/2) {
+//       this.y = 0 - this.randomWidth/2;
+//       this.speedY *= -1
+//     }
+//     if (this.x > $(window).innerWidth() - this.randomWidth/2) {
+//       this.x = $(window).innerWidth() - this.randomWidth/2
+//       this.speedX *= -1
+//     }
+//     if (this.y > this.el.height() - this.randomWidth/2) {
+//       this.y = this.el.height() - this.randomWidth/2
+//       this.speedY *= -1
+//     }
+//   }
+//   let BallMoving = function(el, options) {
+//     this.setting = {
+//       num: 4,
+//       minSpeed: 2,
+//       maxSpeed: 6
+//     }
+//     this.el = el
+//     this.setting = $.extend(this.settings, options)
+//     this.createBall()
+//     this.start()
+//   }
+//   BallMoving.prototype.createBall = function() {
+//     for(let i = 0; i< this.setting.num; i++) {
+//       let ball = new Ball(this.el, {
+//         minSpeed: this.setting.minSpeed,
+//         maxSpeed: this.setting.maxSpeed
+//       });
+//       this.el.append(ball.div);
+//       balls.push(ball);
+//     }
+//   }
+//   BallMoving.prototype.start = function() {
+//     for (let i = 0; i < balls.length; i++) {
+//       balls[i].draw()
+//       balls[i].update()
+//     }
+//     requestAnimationFrame(this.start.bind(this))
+//   }
+//   new BallMoving($('header#header'), {
+//     num: 8,
+//     minSpeed: 2,
+//     maxSpeed: 6
+//   })
+// })
 
 
 // 滾動至 about
@@ -156,7 +156,7 @@ $(function() {
     if ($('.l-about')[0] !== undefined) {
       let $about = $('.l-about')
       let aboutTop = $about.offset().top - 100
-      let aboutBottom = $about.offset().top + $about.outerHeight() / 2
+      let aboutBottom = $about.offset().top + $about.outerHeight() / 2.5
       if (this.scrollY > aboutTop && this.scrollY < aboutBottom) {
         $('body').addClass('is-about-active')
       } else {

@@ -98,7 +98,7 @@ section
     position: absolute
     left: 0
     top: 0
-    +size(100%, 90rem)
+    +size(100%, 30rem)
     background-image: linear-gradient(to bottom, $color-gray-light, transparent)
     z-index: -100
   &__title-section
@@ -127,7 +127,7 @@ section
     top: -7%
   &__title-sub
     padding: 0.7rem 3.7rem
-    background-color: $color-main
+    background-color: $color-black-light
     border-radius: 0 2rem 2rem 0
     text-align: center
     white-space: nowrap
@@ -182,7 +182,7 @@ section
     &::after
       content: ''
       display: block
-      +size(100%, 90rem)
+      +size(100%, 100rem)
   &__blockade-bg-row
     position: sticky
     position: -webkit-sticky
@@ -331,9 +331,9 @@ section
     display: block
     position: absolute
     left: 0
-    top: 0
-    +size(100%, 100rem)
-    background-image: linear-gradient(to bottom, transparent 20%, rgba($color-main, 0.4) 50%, transparent 100%)
+    top: 50%
+    +size(100%, 60rem)
+    background-image: linear-gradient(to bottom, transparent 5%, rgba($color-main, 0.4) 70%, transparent 100%)
   &__title-section
     margin-bottom: 10rem
     text-align: center
@@ -723,12 +723,14 @@ section
       left: 30%
       top: 4%
       padding: 1.6vw
+      border: 1px solid $color-black-light
     &__bg-bottom
       &::before
         border-radius: 0 0 0 6rem
     &__text-wrap-bottom
       right: 20%
       padding: 1.7vw
+      border: 1px solid $color-black-light
 
   .l-popular
     padding-top: 16vw
