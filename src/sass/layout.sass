@@ -55,18 +55,18 @@ header#header
       position: relative !important
   &__logo-mask
     max-width: 9rem
-  &__content
-    text-align: center
-    white-space: nowrap
     &::before
       content: ''
       display: block
       position: absolute
-      left: 0
-      top: 0
-      +size(10rem)
+      left: -3%
+      top: -3%
+      +size(9.5rem)
       background-color: $color-main
       border-radius: 50%
+  &__content
+    text-align: center
+    white-space: nowrap
   &__title
     position: relative !important
     margin-bottom: 1.2rem
@@ -111,7 +111,7 @@ section
     background-image: url('../img/about/story01.jpg')
     background-size: cover
     background-position: center center
-    +size(100%, 40vw)
+    +size(100%, 45vw)
     &::after
       content: ''
       display: block
@@ -157,7 +157,7 @@ section
     flex-direction: column
     justify-content: center
     align-items: center
-    margin-top: -40rem
+    margin-top: -35rem
     white-space: nowrap
     overflow: hidden
   &__story-two-row
@@ -568,7 +568,7 @@ section
 @media (max-width: 1024px)
   .l-about
     &__content
-      margin-top: -32rem
+      margin-top: -30rem
     &__bg-top
       &::before
         border-radius: 0 12rem 0 0
@@ -588,8 +588,6 @@ section
 
 @media (max-width: 991.98px)
   .l-about
-    &__story-one
-      +size(100%, 45vw)
     &__deco
       top: 5rem
       box-shadow: 0 0 3px $color-black-light
@@ -684,24 +682,27 @@ section
     &__ball-mask
       &.--mask01
         transform: rotate(40deg) !important
-        max-width: 14rem
+        max-width: 13rem
       &.--mask02
         transform: rotate(-80deg) !important
         max-width: 12rem
     &__ball-left
       &.--ball01
         left: 60vw !important
-        top: 10vw !important
+        top: 15vw !important
       &.--ball02
         left: 40vw !important
-        top: -5vw !important
+        top: 0 !important
     &__cup-ball-mask
-      max-width: 16rem
+      max-width: 15rem
 
 
   .l-about
     &::before
       +size(100%, 230rem)
+      background-image: linear-gradient(to bottom, $color-gray-light 0%, $color-main 20%, $color-main 90%, rgba($color-gray-light, 0.1) 100%)
+    &__story-one
+      +size(100%, 52vw)
     &__deco
       &.--deco01
         +size(4rem)

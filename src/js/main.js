@@ -65,9 +65,9 @@ $(function() {
 $(function() {
   let balls = []
   let gradients = [
-    'radial-gradient(circle at 50% 50%, rgba(255, 255, 250, 0), rgba(255, 255, 250, 0) 0%)',
-    'radial-gradient(circle at 50% 50%, rgba(255, 255, 250, 0.1), rgba(255, 255, 250, 0) 50%)',
-    'radial-gradient(circle at 50% 50%, rgba(255, 218, 199, 0.2), rgba(255, 255, 250, 0) 50%)'
+    'radial-gradient(circle at 50% 50%, rgba(255, 229, 217, 0.2), rgba(255, 255, 250, 0) 0%)',
+    'radial-gradient(circle at 50% 50%, rgba(255, 229, 217, 0.2), rgba(255, 229, 217, 0) 30%)',
+    'radial-gradient(circle at 50% 50%, rgba(255, 218, 199, 0.1), rgba(255, 229, 217, 0) 50%)'
   ]
   let Ball = function(el, options) {
     this.setting = {
