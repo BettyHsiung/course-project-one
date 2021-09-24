@@ -173,7 +173,6 @@ $(function() {
     let newsSwiper = new Swiper('.l-popular__swiper', {
       freeMode : true,
       loop: true,
-      loopslides: 20,
       speed: 4000,
       slidesPerView : 5,
       autoplay: {
