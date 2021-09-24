@@ -174,24 +174,24 @@ $(function() {
       freeMode : true,
       loop: true,
       loopslides: 20,
-      speed: 5000,
-      slidesPerView : 2,
+      speed: 4000,
+      slidesPerView : 5,
       autoplay: {
         delay: 0,
         disableOnInteraction: false,
       },
       breakpoints: {
         1024: {
-          slidesPerView: 4.5,
-        },
-        992: {
           slidesPerView: 4,
         },
-        768: {
+        992: {
           slidesPerView: 3.5,
         },
-        576: {
+        768: {
           slidesPerView: 3,
+        },
+        576: {
+          slidesPerView: 2,
         }
       },
     })
