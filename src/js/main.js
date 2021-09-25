@@ -175,7 +175,7 @@ $(function() {
       freeMode: true,
       loop: true,
       speed: 5000,
-      slidesPerView: 5,
+      slidesPerView: 2,
       spaceBetween: 15,
       autoplay: {
         delay: 0,
@@ -183,16 +183,16 @@ $(function() {
       },
       breakpoints: {
         1024: {
-          slidesPerView: 4,
+          slidesPerView: 5,
         },
         992: {
-          slidesPerView: 3.5,
+          slidesPerView: 4,
         },
         768: {
-          slidesPerView: 3,
+          slidesPerView: 3.5,
         },
         576: {
-          slidesPerView: 2,
+          slidesPerView: 3,
         }
       },
     })
