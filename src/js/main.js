@@ -171,10 +171,12 @@ $(function() {
   // swiper
   if (new Swiper() !== undefined) {
     let newsSwiper = new Swiper('.l-popular__swiper', {
-      freeMode : true,
+      longSwipesRatio: 0.1,
+      freeMode: true,
       loop: true,
-      speed: 4000,
-      slidesPerView : 5,
+      speed: 5000,
+      slidesPerView: 5,
+      spaceBetween: 15,
       autoplay: {
         delay: 0,
         disableOnInteraction: false,
