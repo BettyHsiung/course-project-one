@@ -70,7 +70,7 @@
       transform: translate(-50%, -50%)
   &__img-mask
     position: absolute
-    right: 9vw
+    right: 8vw
     bottom: 5rem
     max-width: 15rem
 
@@ -120,13 +120,13 @@
   &__link-box
     display: flex
     justify-content: flex-end
-    margin: 3rem 0 0 1.5rem
+    margin: 3rem 0 0 2.2rem
   &__link-wrap
     margin-right: 2rem
     transition: 0.3s
   &__link-wrap:hover &
     &__link
-      transform: rotate(-45deg)
+      transform: rotate(25deg)
   &__link
     font-size: 3rem
     transition: 0.3s
@@ -234,11 +234,11 @@
 .o-btn-all
   display: inline-block
   font-family: $font-roboto
-  font-size: 1.8rem
+  font-size: 1.6rem
   font-weight: 700
-  letter-spacing: 0.3rem
-  padding: 0.8rem 6rem
-  border: 1px solid $color-black-light
+  letter-spacing: 0.15rem
+  padding: 1.4rem 6.5rem
+  border: 2px solid $color-black-light
   background-color: transparent
   transition: 0.5s linear
   z-index: 10
@@ -256,13 +256,37 @@
   &:hover::before
     +size(100%)
     z-index: -10
-    
+
+/* -- btn news -- */   
+.o-btn-news
+  font-size: 1.8rem
+  font-family: $font-roboto
+  font-weight: 500
+  letter-spacing: 0.2rem
+  display: inline-block
+  padding: 1.2rem 8rem
+  border: 2px solid $color-black-light
+  border-radius: 4rem
+  background-color: transparent
+  transition: 0.2s linear
+  z-index: 10
+  &:hover
+    border: 2px solid rgba($color-main, 0.9)
+    color: $color-gray-light
+    background-color: rgba($color-main, 0.9)
+
+
+@media (max-width: 767.98px)
+  .o-btn-news
+    font-size: 1.5rem
+    padding: 1rem 6rem
+
 
 /* -- btn map -- */
 .o-btn-map
   font-family: $font-roboto
-  font-weight: 700
-  letter-spacing: 0.1rem
+  font-weight: 500
+  letter-spacing: 0.15rem
   display: inline-block
   padding: 0.9rem
   transition: 0.3s linear
@@ -366,6 +390,7 @@
     white-space: nowrap
   &__desc
     font-size: 1.6rem
-    font-weight: 400
+    font-weight: 500
     letter-spacing: 0.1rem
+    color: rgba($color-black-light, 0.8)
     white-space: nowrap

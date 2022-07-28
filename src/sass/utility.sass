@@ -1,6 +1,7 @@
-$color-main: #ffdac7
-$color-sub: #afb9c8
-$color-black-light: #9c8279
+$color-main: #f7d0be
+$color-sub: #8499b0
+$color-black-light: #57473e
+$color-gray: #f5f5ea
 $color-gray-light: #fffffa
 $font-noto-sans: 'Noto Sans TC', '微軟正黑體', sans-serif
 $font-roboto: 'Roboto','Arial', sans-serif
@@ -28,7 +29,7 @@ body
   font-family: $font-noto-sans
   font-size: 1.6rem
   font-weight: 500
-  letter-spacing: 0.5rem
+  letter-spacing: 0.7rem
   line-height: 1.7
   color: $color-black-light
   background-color: $color-gray-light
@@ -67,13 +68,14 @@ i
   font-size: 3rem
 
 .u-title
-  font-size: 3.5rem
-  letter-spacing: 1rem
+  font-size: 4rem
+  letter-spacing: 1.2rem
 .u-text-desc
-  font-size: 1.7rem
+  font-size: 1.8rem
+  font-weight: 500
   letter-spacing: 0.7rem
-  line-height: 2
-  color: rgba($color-black-light, 0.7)
+  line-height: 2.2
+  color: rgba($color-black-light, 0.8)
 .u-title-section
   font-family: $font-roboto
   font-size: 6.5rem
@@ -86,17 +88,18 @@ i
 .u-content-desc
   font-size: 2rem
   font-weight: 500
-  letter-spacing: 0.5rem
+  letter-spacing: 0.4rem
   line-height: 2.2
 .u-text-deco
-  font-size: 2rem
-  letter-spacing: 0.2rem
+  font-size: 2.2rem
+  letter-spacing: 0.3rem
+  color: rgba($color-black-light, 0.9)
 .u-text-cake
   font-family: $font-roboto
   font-size: 13rem
   font-weight: 700
   letter-spacing: 1.7rem
-  text-shadow: 25px 25px rgba($color-main, 0.4)
+  text-shadow: 25px 25px rgba($color-gray, 0.8)
 .u-text-product
   font-size: 4.5rem
   color: $color-gray-light
@@ -109,6 +112,7 @@ i
   font-size: 1.4rem
   letter-spacing: 0.1rem
 
+
 @media (max-width: 1199.98px)
   html
     font-size: calc(15px * 10 / 16)
@@ -120,7 +124,7 @@ i
     font-size: 3.8rem
   .u-text-cake
     font-size: 11rem
-    text-shadow: 17px 17px rgba($color-main, 0.4)
+    text-shadow: 17px 17px rgba($color-gray, 0.8)
 
 @media (max-width: 767.98px)
   .u-title-section
@@ -143,7 +147,7 @@ i
     letter-spacing: 0.75rem
   .u-content-desc
     font-size: 1.6rem
-    letter-spacing: 0.25rem
+    letter-spacing: 0.2rem
   .u-text-deco
     font-size: 1.6rem
     font-weight: 400
@@ -151,4 +155,4 @@ i
   .u-text-cake
     font-size: 5.5rem
     letter-spacing: 1rem
-    text-shadow: 10px 10px rgba($color-main, 0.4)
+    text-shadow: 10px 10px rgba($color-gray, 0.8)
