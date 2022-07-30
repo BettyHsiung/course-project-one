@@ -5,13 +5,8 @@ function isMobile() {
 }
 if (!isMobile()) {
   let explorer = navigator.userAgent
-  console.log(navigator.userAgent)
-  if (explorer.indexOf('Firefox') >= 0) {
+  if (explorer.indexOf('Firefox') > -1 || explorer.indexOf('Chrome') > -1) {
     $('body').append('<script async src="js/smooth-scrolling-chrome.js"></script>')
-  } else if (explorer.indexOf('Chrome') >= 0) {
-    $('body').append('<script async src="js/smooth-scrolling-chrome.js"></script>')
-  } else if (explorer.indexOf('Safari') >= 0) {
-    $('body').append('<script async src="js/smooth-scrolling-safari.js"></script>')
   }
 }
 
